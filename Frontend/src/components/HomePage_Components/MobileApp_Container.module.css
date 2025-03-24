@@ -1,0 +1,80 @@
+.container{
+    width: 1290px;
+    height: 465px;
+    background-color: #121212;
+    margin-left: 120px;
+    margin-top: 150px;
+    border-radius: 20px;
+    gap: 20px;
+    padding: 40px;
+}
+
+.container h4{
+    color: #ffffff;
+    font-size: 28px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.container_div{
+    width: 50%;
+    margin-left: 30px;
+}
+
+.container_div .mobileApp_description{
+    color: #ffffff;
+    margin-top: 30px;
+    opacity: 0.6;
+    font-size: 16px;
+
+}
+
+.container .container_div .timeslot{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.container_div  span {
+    width: 80px;
+    height: 80px;
+    background-color: #85DDEA;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight:500;
+}
+
+.container_div .comingSoon_button{
+   width: 226px;
+   height: 56px;
+   background-color: #ffffff;
+   border-bottom-right-radius: 50px;
+   border-top-left-radius: 50px;
+   border-top-right-radius: 50px;
+   display: flex;
+   gap: 10px;
+   justify-content: center;
+   align-items: center;
+   margin-top: 35px;
+}
+
+.comingSoon_button .comingSoon_button_text{
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.doubleCircle{
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #000000;
+}
