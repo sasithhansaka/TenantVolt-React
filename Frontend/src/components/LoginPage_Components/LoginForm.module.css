@@ -1,0 +1,116 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.formGroup label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.formGroup input {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.rememberMe input {
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+}
+
+.forgotPassword {
+    font-size: 0.95rem;
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgotPassword:hover {
+    color: #3a7bc8;
+    text-decoration: underline;
+}
+
+.loginButton {
+    padding: 1rem;
+    background-color: #171717;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.loginButton:hover {
+    background-color: #070707;
+}
+
+@media (max-width: 768px) {
+    .loginForm {
+        gap: 1.5rem;
+    }
+
+    .formGroup input {
+        padding: 0.9rem;
+    }
+
+    .loginButton {
+        padding: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .loginForm {
+        gap: 1.3rem;
+    }
+
+    .formGroup input {
+        padding: 0.8rem;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+}
