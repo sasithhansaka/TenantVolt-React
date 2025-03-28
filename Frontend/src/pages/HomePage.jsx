@@ -7,7 +7,7 @@ import { images, titles, content } from '../data/FeatureData.jsx';
 
 function Home() {
 
- 
+//  hiiiii
   return (
     <div>
       <Navbar/>
