@@ -17,6 +17,7 @@ function Home() {
        content={content}
       />
       <MobileApp_Container/>
+      
     </div>
   )
 }
