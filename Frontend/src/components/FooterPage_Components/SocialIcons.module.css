@@ -1,0 +1,39 @@
+.socialIcons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.iconLink {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.iconLink:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.icon {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .socialIcons {
+        gap: 1rem;
+    }
+
+    .iconLink {
+        width: 36px;
+        height: 36px;
+    }
+}
