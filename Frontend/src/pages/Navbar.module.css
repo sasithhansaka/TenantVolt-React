@@ -1,0 +1,110 @@
+.navbar {
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #2f2f2f62;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1150px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 1rem; /* Reduced from default space-between spacing */
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: auto; /* Pushes nav items to the right */
+}
+
+.navItems {
+  display: flex;
+  gap: 1.5rem; /* Reduced from 2rem */
+  padding-left: 1rem; /* Optional: small padding between logo and first item */
+}
+
+/* Rest of your existing styles... */
+
+/* Add this to your existing CSS */
+.navLink {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navLink:hover {
+  color: #85ddea;
+}
+
+.navLink.active {
+  color: #85ddea;
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #85ddea;
+  transform: scaleX(1);
+  transition: transform 0.5s ease;
+}
+
+/* Optional: Add animation for hover effect */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #85ddea;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .navContainer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .navItems {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .navLink {
+    font-size: 0.9rem;
+  }
+}
