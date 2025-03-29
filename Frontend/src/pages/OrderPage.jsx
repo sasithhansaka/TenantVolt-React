@@ -1,12 +1,18 @@
-import React from 'react'
-import styles from './OrderPage.module.css'
+import React from 'react';
+import ProductHeader from '../components/OrderPage_Components/ProductHeader';
+import BundleOptions from '../components/OrderPage_Components/BundleOptions';
+import styles from './OrderPage.module.css';
 
 function OrderPage() {
   return (
-    <div>
-      
-    </div>
-  )
+      <div className={styles.orderPage}>
+        <div className={styles.imageSection}></div>
+        <div className={styles.contentSection}>
+          <ProductHeader />
+          <BundleOptions />
+        </div>
+      </div>
+  );
 }
 
-export default OrderPage
+export default OrderPage;
