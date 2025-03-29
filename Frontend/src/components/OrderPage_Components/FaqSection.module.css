@@ -27,15 +27,15 @@
 }
 
 .faqItem {
-    border: 1px solid #D7D7D7;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    border: 2px solid #d7d7d74c;
+    border-radius: 20px;
+    margin-bottom: 2rem;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .faqItem.active {
-    border-color: #D7D7D7;
+    border-color: #d7d7d74c;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
