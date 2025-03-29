@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./BundleOptions.module.css";
-import { Bundles } from "../../data/BundlesData.jsx"; // Corrected import path
+import { Bundles } from "../../data/BundlesData.jsx"; 
 
 function BundleOptions() {
   return (
