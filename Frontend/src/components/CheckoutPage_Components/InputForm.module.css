@@ -1,0 +1,117 @@
+.checkoutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000; /* Black background */
+  padding: 20px;
+}
+
+  .checkoutForm {
+    width: 100%;
+    max-width: 900px;
+    /* background: #1A1A1A; Dark form background */
+    border-radius: 8px;
+    padding: 40px;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFF; /* White text */
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Name Section - Flex Layout */
+  .nameSection {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .nameField {
+    flex: 1;
+  }
+  
+  /* Field Groups */
+  .fieldGroup {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFF; /* White labels */
+    margin-bottom: 8px;
+    padding: 10px 10px;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 20px 25px;
+    background-color: #2D2C2C; /* Input background */
+    border: 1px solid #2D2C2C;
+    border-radius: 2px;
+    color: #ffffff; /* White text */
+    font-size: 17px;
+  }
+  
+  .inputField:focus {
+    outline: none;
+    border-color: #555;
+  }
+  
+  /* Mobile Number Input */
+  .mobileInput {
+    display: flex;
+  }
+  
+  .countryCode {
+    padding: 12px 15px;
+    background-color: #2D2C2C;
+    border: 1px solid #444;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    color: #FFF;
+    font-size: 16px;
+  }
+  
+  .mobileInput .inputField {
+    border-radius: 2px;
+
+  }
+  
+  /* Submit Button */
+  .submitButton {
+    width: 100%;
+    padding: 14px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .submitButton:hover {
+    background-color: #3a7bc8;
+  }
+  
+  @media (max-width: 768px) {
+    .checkoutForm {
+      padding: 30px 20px;
+    }
+    
+    .nameSection {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .title {
+      font-size: 24px;
+    }
+  }
