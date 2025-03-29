@@ -1,0 +1,16 @@
+.navbar {
+    width: 100%;
+    background-color: #ffffff; /* Black background */
+    padding: 15px 0;
+    text-align: center; /* Centers the text horizontally */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+  }
+  
+  .logo {
+    color: #000000; /* White text */
+    font-size: 30px; /* Font size as requested */
+    margin: 0; /* Removes default margin */
+    font-weight: normal; /* No bold by default */
+  }
