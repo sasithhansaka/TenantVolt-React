@@ -10,6 +10,12 @@ function LoginForm() {
         e.preventDefault();
         console.log({ email, password, rememberMe });
         // Add your login logic here
+
+
+        
+
+
+
     };
 
     return (

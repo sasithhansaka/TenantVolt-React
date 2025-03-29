@@ -1,30 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./FeaturesContainer.module.css";
 
 function FeaturesContainer({ images, titles, content }) {
+  const [currentIndex, setCurrentIndex] = useState(0); // State to track the current feature index
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Cycle through features
+    }, 6000); // Change feature every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [images.length]);
+
   return (
-    <div>
-      <div className={styles.benefits_container}>
-        <h1>
-          Why<b> Brand Name</b> Is Awesome?
-        </h1>
-        <div className={styles.benefits}>
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={styles.benefit}
-              style={index === 1 ? { height: "350px" } : {}}
-            >
-              <div className={styles.icon}>
-                <img src={image} alt="feature1" />
-              </div>
-              <p className={styles.title}>
-                {titles[index].split(" ").slice(0, 2).join(" ")} <br /> {titles[index].split(" ").slice(2).join(" ")}
-              </p>
-              <p className={styles.content}>{content[index]}</p>
-            </div>
-          ))}
-        </div>
+    <div >
+      <div className={styles.oneFeature}>
+        
+        <img src={images[currentIndex]} alt={titles[currentIndex]} />
+        <p className={styles.title}>{titles[currentIndex]}</p>
+        <p className={styles.content}>{content[currentIndex]}</p>
       </div>
     </div>
   );

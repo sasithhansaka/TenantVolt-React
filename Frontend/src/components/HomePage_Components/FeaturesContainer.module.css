@@ -1,66 +1,29 @@
-/*  */
-
-.benefits_container{
-    margin-left: 50px;
-    margin-top: 100px;
+.oneFeature {
+  width: 800px;
+  height: 600px;
+  padding: 5px;
+  color: #ffffff;
+  background-color: black;
+  border-radius: 20px;
+  /* margin-top: 40px; */
 }
 
-.benefits_container h1{
-    font-size: 38px;
-    font-weight: 400;
-    margin-left: 400px;
-    color: #FFFFFF;
+.oneFeature img {
+  border-radius: 20px 20px 0px 0px;
+  width: 790px;
+  height: 400px;
+  object-fit: cover;
+
 }
 
-.benefits{
-    display: flex;
-    gap: 20px;
-    margin-left: 110px;
-    margin-top: 30px;
+
+.oneFeature .title{
+    font-size: 20px;
+    font-weight: bolder;
+    padding:10px 50px;
 }
 
-.benefit{
-    width:285px ;
-    height: 385px;
-    background-color: #D7D7D7;
-    margin-top: 30px;
-    border-radius: 20px;
-}
-
-.benefit .icon{
-    width: 80px;
-    height: 80px;
-    background-color: #E9E9E9;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 35px;
-    margin-left: 20px;
-}
-
-.benefit .icon img{
-    width: 53px;
-    height: 53px;
-}
-
-.benefit .title{
-    color: #000000;
-    font-weight:700;
-    font-size: 23px;
-    font-family: "Poppins", sans-serif;
-    margin-left: 24px;
-    margin-top: 20px;
-}
-
-.benefit .content{
-    color: #000000;
-    font-weight:500;
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    opacity: 0.7;
-    margin-left: 24px;
-    margin-top: 15px;
-    margin-right:15px;
-    line-height: 26px;
+.oneFeature .content{
+    font-size: 14px;
+    padding:1px 50px;
 }
