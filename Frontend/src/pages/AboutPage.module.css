@@ -1,0 +1,110 @@
+.aboutContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #333;
+}
+
+.heroSection {
+    text-align: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.heroSection h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.storySection {
+    padding: 4rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.storySection h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #000;
+    z-index: 1;
+}
+
+.timelineItem {
+    position: relative;
+    width: 30%;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.timelineItem h3 {
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.teamSection {
+    padding: 4rem 0;
+}
+
+.teamSection h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timelineItem {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .heroSection h1 {
+        font-size: 2rem;
+    }
+
+    .teamGrid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
