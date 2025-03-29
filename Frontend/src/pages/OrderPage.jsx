@@ -12,18 +12,20 @@ import Footer from "../components/FooterPage_Components/Footer";
 function OrderPage() {
   return (
     <div>
-    <div>
-      <Navbar />
-      <div className={styles.orderPage}>
-        <div className={styles.imageSection}></div>
-        <div className={styles.contentSection}>
-          <ProductHeader />
-          <BundleOptions />
+      <div>
+        <Navbar />
+        <div className={styles.orderPage}>
+          <div className={styles.imageSection}></div>
+          <div className={styles.contentSection}>
+            <ProductHeader />
+            <BundleOptions />
+          </div>
+        </div>
+        <FaqSection />
+        <div style={{marginTop:'500px'}}>
+          <Footer />
         </div>
       </div>
-      <FaqSection/>
-      {/* <Footer /> */}
-    </div>
     </div>
   );
 }

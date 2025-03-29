@@ -42,7 +42,7 @@ const Navbar = () => {
             Order Team
           </a>
           <a
-            href="/contact"
+            href="/checkout"
             className={`${styles.navLink} ${
               activeLink === "Contact" ? styles.active : ""
             }`}

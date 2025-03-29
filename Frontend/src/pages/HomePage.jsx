@@ -19,6 +19,9 @@ function Home() {
   return (
     <div>
       <Navbar />
+      <div style={{ marginTop: "80px" ,height:'700px', width:'100%',backgroundColor:'green'}}>
+
+      </div>
       <BenifitsContainer images={images} titles={titles} content={content} />
       <MobileApp_Container />
       <div className={styles.featuresContainer}>
