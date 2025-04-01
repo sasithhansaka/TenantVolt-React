@@ -3,14 +3,13 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("Home");
-
+  
   useEffect(() => {
-    // Set active link based on current URL when component mounts
     const path = window.location.pathname;
     if (path === "/") setActiveLink("Home");
     else if (path === "/order") setActiveLink("order");
     else if (path === "/contact") setActiveLink("Contact");
-    else if (path === "/abouth") setActiveLink("Abouth");
+    else if (path === "/about") setActiveLink("about");
     else if (path === "/profile") setActiveLink("Profile");
   }, []);
 
@@ -39,10 +38,10 @@ const Navbar = () => {
             }`}
             onClick={() => handleNavClick("order")}
           >
-            Order Team
+            Order Now
           </a>
           <a
-            href="/checkout"
+            href="/contact"
             className={`${styles.navLink} ${
               activeLink === "Contact" ? styles.active : ""
             }`}
@@ -51,16 +50,16 @@ const Navbar = () => {
             Contact
           </a>
           <a
-            href="/abouth"
+            href="/about"
             className={`${styles.navLink} ${
-              activeLink === "Abouth" ? styles.active : ""
+              activeLink === "about" ? styles.active : ""
             }`}
-            onClick={() => handleNavClick("Abouth")}
+            onClick={() => handleNavClick("about")}
           >
-            Abouth
+            About
           </a>
           <a
-            href="/profile"
+            href="/login"
             className={`${styles.navLink} ${
               activeLink === "Profile" ? styles.active : ""
             }`}

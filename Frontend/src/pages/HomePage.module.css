@@ -20,6 +20,10 @@
     margin-top: 40px;
 }
 
+.features p{
+    font-size: 15px;
+}
+
 .featuresContainer h4{
-    padding: 40px 140px 20px ;
+    padding: 40px 40px 20px ;
 }
