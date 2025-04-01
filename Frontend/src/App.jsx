@@ -6,6 +6,8 @@ import NoteFound from "./pages/NoteFound";
 import LoginPage from "./pages/LoginPage";
 import OrderPage from "./pages/OrderPage";
 import CheckOutPage from "./pages/CheckOutPage";
+import AboutPage from "./pages/AboutPage";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -15,8 +17,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/order" element={<OrderPage />} />
-          <Route path="*" element={<NoteFound />} />
           <Route path="/checkout" element={<CheckOutPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="*" element={<NoteFound />} />
         </Routes>
       </Router>
     </div>
