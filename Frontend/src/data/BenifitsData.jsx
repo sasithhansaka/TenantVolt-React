@@ -6,15 +6,15 @@ export const images = [
 ];
 
 export const titles = [
-  'Feature Flag',
-  'Monthly Fees',
-  'Smart IoT Integration',
+  'Easy Expansion',
+  'Accurate Billing',
+  'Cost Savings',
   'Real Time Monitoring',
 ];
 
 export const content = [
-  'Owners Can Monitor Energy Usage Remotely, Improving Decision-Making And Operational Efficiency.',
-  'One Brand Name Card And Unlimited Various Things. Enjoy All The Day With Us.',
-  'Owners Can Monitor Energy Usage Remotely, Improving Decision-Making And Operational Efficiency.',
-  'Get instant updates on energy usage, allowing for quicker responses and better time management.',
+  'The design allows adding more rooms or features later. Future upgrades could include mobile access or automatic billing.',
+  'It replaces estimated bills with precise measurements. Tenants pay only for what they use, while owners avoid financial losses.',
+  'The system helps identify wasteful consumption. Tenants can adjust usage to lower bills, and owners can spot problems like faulty wiring.',
+  'The system provides live electricity monitoring for each room.View current consumption through a simple web dashboard.',
 ];

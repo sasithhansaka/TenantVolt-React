@@ -6,7 +6,7 @@ function BenifitsContainer({ images, titles, content }) {
     <div>
       <div className={styles.benifitsContainer}>
         <h1>
-          Why<b> Brand Name</b> Is Awesome?
+          Why<b> TENANVOLT</b> Is Awesome?
         </h1>
         <div className={styles.benefits}>
           {images.map((image, index) => (
