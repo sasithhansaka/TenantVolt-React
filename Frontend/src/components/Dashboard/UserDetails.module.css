@@ -1,0 +1,29 @@
+.userDetailsContainer {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .welcomeText {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #555;
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+  }
+  
+  .brand {
+    font-size: 18px;
+    color: #444;
+    margin: 0;
+    font-weight: 600;
+    font-style: italic;
+  }
