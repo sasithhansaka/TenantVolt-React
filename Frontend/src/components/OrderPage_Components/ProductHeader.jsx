@@ -1,21 +1,30 @@
-import React from 'react';
-import styles from './ProductHeader.module.css';
+import React, { useState } from "react";
+import styles from "./ProductHeader.module.css";
+import BundleOptions from "./BundleOptions";
 
-function ProductHeader() {
-    return (
-        <div className={styles.productHeader}>
-            <h1>TESLA SAROS 10</h1>
-            <p className={styles.description}>
-                The Tesla Optimus Gen 2 is A Cutting-Edge Humanoid Robot That Tesla Created To Revolutionize Automation And Human-Robot Interaction.
-            </p>
-            <div className={styles.features}>
-                {[...Array(4)].map((_, i) => (
-                    <p key={i}>Fcdvgb Eggehegegce Geg E Ge Gedcfed Ge Dgecggh</p>
-                ))}
-            </div>
-            <div className={styles.divider}></div>
+const ProductHeader = () => {
+  return (
+    <div className={styles.productHeader}>
+      <div className={styles.headerContent}>
+        <h1 className={styles.title}>TESLA SAROS 10</h1>
+        <p className={styles.description}>
+          The Tesla Optimus Gen 2 is A Cutting-Edge Humanoid Robot That Tesla
+          Created To Revolutionize Automation And Human-Robot Interaction.6g
+          Dgdgb Wdwgdg
+        </p>
+
+        <div className={styles.textLines}>
+          <p>Fedvgb Eggelnegapze Geg E Ge Gedefeld Ge Dgacggh</p>
+          <p>Fedvgb Eggelnegapze Geg E Ge Gedefeld Ge Dgacggh</p>
+          <p>Fedvgb Eggelnegapze Geg E Ge Gedefeld Ge Dgacggh</p>
+          <p>Fedvgb Eggelnegapze Geg E Ge Gedefeld Ge Dgacggh</p>
         </div>
-    );
-}
+        <hr></hr>
+      </div>
+
+      <BundleOptions />
+    </div>
+  );
+};
 
 export default ProductHeader;

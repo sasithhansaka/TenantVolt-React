@@ -1,27 +1,40 @@
 .productHeader {
-    text-align: left;
+    width: 520px;
+    background-color: #121212;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
 }
 
-.productHeader h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+.headerContent {
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffffff;
 }
 
 .description {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #cccccc;
 }
 
-.features p {
-    color: #444;
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
+.textLines {
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.5;
 }
 
-.divider {
-    height: 1px;
-    background-color: #ddd;
-    margin: 2rem 0;
+.textLines p {
+    margin: 5px 0;
+}
+
+
+.headerContent hr{
+  background-color: #ce0000;
 }

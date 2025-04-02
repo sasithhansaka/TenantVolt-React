@@ -1,19 +1,4 @@
 .orderPage {
     display: flex;
-    min-height: 100vh;
+    margin-top: 100px;
 }
-
-.imageSection {
-    flex: 1;
-    background-color: #000;
-}
-
-.contentSection {
-    flex: 1;
-    padding: 3rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/*  */
-
