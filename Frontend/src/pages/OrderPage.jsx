@@ -1,13 +1,10 @@
 import React from "react";
 import ProductHeader from "../components/OrderPage_Components/ProductHeader";
-import BundleOptions from "../components/OrderPage_Components/BundleOptions";
 import styles from "./OrderPage.module.css";
 import FaqSection from "../components/OrderPage_Components/FaqSection";
-// import Navbar from "./Navbar";
-
 import Navbar from "./Navbar";
-
 import Footer from "../components/FooterPage_Components/Footer";
+import ProductBox from "../components/OrderPage_Components/ProductBox";
 
 function OrderPage() {
   return (
@@ -15,14 +12,15 @@ function OrderPage() {
       <div>
         <Navbar />
         <div className={styles.orderPage}>
-          <div className={styles.imageSection}></div>
-          <div className={styles.contentSection}>
+          <div>
+            <ProductBox/>
+          </div>
+          <div>
             <ProductHeader />
-            <BundleOptions />
           </div>
         </div>
         <FaqSection />
-        <div style={{marginTop:'500px'}}>
+        <div style={{ marginTop: "500px" }}>
           <Footer />
         </div>
       </div>

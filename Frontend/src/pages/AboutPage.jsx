@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './AboutPage.module.css';
 import TeamCard from '../components/AboutPage_Components/TeamCard';
 import ValueProposition from '../components/AboutPage_Components/ValueProposition';
+import Navbar from './Navbar';
+import Footer from '../components/FooterPage_Components/Footer';
 
 const AboutPage = () => {
     const teamMembers = [
@@ -54,6 +56,8 @@ const AboutPage = () => {
     ];
 
     return (
+        <div>
+            <Navbar />
         <div className={styles.aboutContainer}>
             <section className={styles.heroSection}>
                 <h1>About TenantVolt</h1>
@@ -90,6 +94,8 @@ const AboutPage = () => {
                     ))}
                 </div>
             </section>
+        </div>
+            <Footer />
         </div>
     );
 };
