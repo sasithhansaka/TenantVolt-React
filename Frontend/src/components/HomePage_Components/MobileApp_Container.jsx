@@ -41,7 +41,7 @@ function MobileApp_Container() {
   return (
     <div className={styles.container}>
       <div style={{ display: "flex", gap: "0px" }}>
-        <div  className={styles.container_div}>
+        <div className={styles.container_div}>
           <h4>Saros Mobile App</h4>
           <div className={styles.timeslot}>
             <span>
@@ -58,17 +58,17 @@ function MobileApp_Container() {
               {timeLeft.seconds} <br></br>Sc
             </span>
           </div>
-          <p className={styles.mobileApp_description}> 
-            The Brand Name Mobile App Will Be Releasing On 2025 8th Of July. You
-            Can Enjoy The Experience Of The Mobile App.the brand name mobile app
-            wille be relasing on 2025 8th of july.you can enjoy the expreinve of
-            the mobile app .the brand name mobile app wille be relasing on 2025
-            8th of july.
+          <p className={styles.mobileApp_description}>
+            The TENANVOLT Mobile App will launch on April 25, 2025,
+            enabling boarding house owners and tenants to track real-time power
+            usage, receive consumption alerts, and manage payments directly from
+            their smartphones, providing convenient, on-the-go access to fair
+            billing and energy savings.
           </p>
           <div className={styles.comingSoon_button}>
             <p className={styles.comingSoon_button_text}>Coming Soon</p>
             <div className={styles.doubleCircle}>
-            <img src="./src/images/Double Right.png" alt="" />
+              <img src="./src/images/Double Right.png" alt="" />
             </div>
           </div>
         </div>
@@ -77,12 +77,15 @@ function MobileApp_Container() {
             className={styles.mobileApp_image}
             src="./src/images/Mobile app.png"
             alt=""
-            style={{ width: '600px', height: '440px' , marginTop:'-18px',marginLeft:'-60px'}}
+            style={{
+              width: "600px",
+              height: "440px",
+              marginTop: "-18px",
+              marginLeft: "-60px",
+            }}
           />
         </div>
-        <div>
-          
-        </div>
+        <div></div>
       </div>
     </div>
   );
