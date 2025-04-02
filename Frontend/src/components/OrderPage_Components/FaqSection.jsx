@@ -4,7 +4,6 @@ import { faqItems } from '../../data/FaqData';
 
 const FaqSection = () => {
     const [faqs, setFaqs] = useState(faqItems);
-
     const toggleFaq = (id) => {
         setFaqs(faqs.map(faq =>
             faq.id === id ? { ...faq, isOpen: !faq.isOpen } : faq
@@ -14,7 +13,7 @@ const FaqSection = () => {
     return (
         <section className={styles.faqSection}>
             <div className={styles.faqContainer}>
-                <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
+                <h2 className={styles.sectionTitle}><b>F</b>requently <b>A</b>sked <b>Q</b>uestions</h2>
 
                 <div className={styles.faqList}>
                     {faqs.map((faq) => (

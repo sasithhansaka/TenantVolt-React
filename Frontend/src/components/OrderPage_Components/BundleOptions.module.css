@@ -1,73 +1,210 @@
+.bundleSection {
+  margin-top: 30px;
+}
+
+.bundleTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
 .bundleOptions {
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.bundleOptions h2 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    color: #333;
+.bundleOption {
+  width: 434px;
+  height: 65px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #2d2c2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.bundleList {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+.bundleOption.selected {
+  background-color: #b5f2fb;
+  color: #121212;
 }
 
-.bundleItem {
-    padding: 1rem;
-    border-left: 3px solid #000;
+.optionTopRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.bundleItem h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #222;
+.selectionIndicator {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  flex-shrink: 0;
 }
 
-.shipping {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
+.bundleOption.selected .selectionIndicator {
+  background-color: #000000;
+}
+
+.packInfo {
+  display: flex;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.packTitle {
+  font-size: 14px;
+}
+
+.packType {
+  font-size: 12px;
+}
+
+.shippingBadge {
+  background-color: #3f3f3f;
+  padding: 2px 8px;
+  border-radius: 15px;
+  font-size: 9px;
+  width: 80px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 140px;
 }
 
 .price {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #000;
-    margin: 0.5rem 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.optionBottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Added for vertical alignment */
+  font-size: 12px;
 }
 
 .discountText {
-    color: #666;
-    font-size: 0.85rem;
+  color: inherit;
 }
 
 .discountAmount {
-    color: #e53935;
-    font-size: 0.9rem;
-    margin-top: 0.2rem;
+  color: inherit;
 }
 
-.divider {
-    height: 1px;
-    background-color: #ddd;
-    margin: 2rem 0;
+/* New Quantity Controls Styles */
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+.quantityButton {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #3f3f3f;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.bundleOption.selected .quantityButton {
+  background-color: #2d2c2c;
+  color: #b5f2fb;
+}
+
+.quantityButton:hover {
+  background-color: #4f4f4f;
+}
+
+.quantityDisplay {
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Buy Button Styles */
 .buyButton {
-    background-color: #000;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.2s;
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .buyButton:hover {
-    background-color: #333;
+  background-color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .bundleOption {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+  }
+
+  .optionTopRow {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .shippingBadge {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.placeOrder_Button {
+  width: 226px;
+  height: 56px;
+  background-color: #ffffff;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+.placeOrder_ButtonText {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.doubleCircle {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #000000;
 }
