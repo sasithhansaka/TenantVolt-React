@@ -5,10 +5,10 @@ function BundleDetails({ id }) {
   // Find the bundle with the matching id
   const selectedBundle = Bundles.find((bundle) => bundle.id === id);
 
-  // If no bundle is found, display a fallback message
-  if (!selectedBundle) {
-    return <div className={styles.error}>Bundle not found</div>;
-  }
+  // // If no bundle is found, display a fallback message
+  // if (!selectedBundle) {
+  //   return <div className={styles.error}>Bundle not found</div>;
+  // }
 
   return (
     <div style={{color:'white'}}>

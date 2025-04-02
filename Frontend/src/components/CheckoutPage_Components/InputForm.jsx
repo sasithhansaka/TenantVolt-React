@@ -20,7 +20,7 @@ function InputForm() {
      const handleSubmit = (e) => {
        e.preventDefault();
        console.log('Form submitted:', formData);
-       // Add your form submission logic here
+
      };
     
 
@@ -30,7 +30,6 @@ function InputForm() {
                <h1 className={styles.title}>CHECKOUT</h1>
                
                <form onSubmit={handleSubmit}>
-                 {/* Name Section - Flex Layout */}
                  <div className={styles.nameSection}>
                    <div className={styles.nameField}>
                      <label className={styles.label}>First Name</label>
@@ -59,7 +58,6 @@ function InputForm() {
                    </div>
                  </div>
        
-                 {/* Mobile Number */}
                  <div className={styles.fieldGroup}>
                    <label className={styles.label}>Mobile Number</label>
                    <div className={styles.mobileInput}>
