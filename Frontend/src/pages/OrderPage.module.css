@@ -1,4 +1,5 @@
 .orderPage {
     display: flex;
-    margin-top: 100px;
+    margin-top: 101px;
+    gap:85px;
 }

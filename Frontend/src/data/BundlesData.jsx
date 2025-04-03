@@ -17,7 +17,7 @@ export const Bundles = [
   },
   {
     id: "3",
-    title: "3 PACK",
+    title: "Unlimted ",
     shipping: "Free Shipping",
     price: "LKR.4500.00",
     discountText: "YOU HAVE 1/OK OFF",
