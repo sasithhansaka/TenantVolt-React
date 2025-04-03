@@ -5,18 +5,21 @@ function SocialAuth() {
     return (
         <div className={styles.socialAuth}>
             <div className={styles.divider}>
+                <span className={styles.dividerLine}></span>
                 <span className={styles.dividerText}>OR</span>
+                <span className={styles.dividerLine}></span>
             </div>
 
-            <button type="button" className={styles.socialButton}>
-                <span className={styles.socialIcon}>f</span>
-                Sign in With Facebook
-            </button>
-
-            <button type="button" className={styles.socialButton}>
-                <span className={styles.socialIcon}>G</span>
-                Sign in With Google
-            </button>
+            <div className={styles.socialButtons}>
+                <button type="button" className={styles.socialButton}>
+                    <span className={styles.socialIcon}>f</span>
+                    Facebook
+                </button>
+                <button type="button" className={styles.socialButton}>
+                    <span className={styles.socialIcon}>G</span>
+                    Google
+                </button>
+            </div>
 
             <p className={styles.signUpText}>
                 New To Here? <a href="/signup">Sign up</a>

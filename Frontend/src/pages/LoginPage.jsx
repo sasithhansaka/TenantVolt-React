@@ -8,12 +8,10 @@ function LoginPage() {
         <div className={styles.loginPage}>
             <div className={styles.loginContainer}>
                 <div className={styles.formSection}>
-                    <h1 className={styles.title}>LOG IN</h1>
-                    <p className={styles.subtitle}>Log in to Access Your TenantVolt</p>
                     <LoginForm />
                     <SocialAuth />
                 </div>
-                <div className={styles.imageSection}></div>
+                <div className={styles.blackSection}></div>
             </div>
         </div>
     );
