@@ -1,13 +1,24 @@
-.bundleSection {
-  margin-top: 30px;
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.decorativeImage {
+  height: 20px; /* Adjust based on your image */
+  width: auto;
+  opacity: 0.7;
 }
 
 .bundleTitle {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 0; /* Remove previous margin */
   color: #ffffff;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .bundleOptions {
@@ -139,7 +150,7 @@
 }
 
 /* Buy Button Styles */
-.buyButton {
+/* .buyButton {
   width: 100%;
   padding: 15px;
   margin-top: 30px;
@@ -151,14 +162,14 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s;
-}
+} */
 
-.buyButton:hover {
+/* .buyButton:hover {
   background-color: #444;
 }
 
 /* Responsive adjustments */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .bundleOption {
     width: 100%;
     height: auto;
@@ -174,7 +185,7 @@
     margin-left: 0;
     margin-right: 0;
   }
-}
+} */ 
 
 .placeOrder_Button {
   width: 226px;
@@ -187,7 +198,7 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin-top: 35px;
+  margin: 35px auto 0; 
   cursor: pointer;
 }
 
@@ -197,6 +208,7 @@
   font-size: 20px;
   font-weight: 600;
   opacity: 0.7;
+  margin-left: 20px;
 }
 
 .doubleCircle {
@@ -206,5 +218,6 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-left: 10px;
   background-color: #000000;
 }
