@@ -1,0 +1,88 @@
+.productBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    margin-left: 130px;
+  }
+  
+  .mainImageContainer {
+    width: 665px;
+    height: 550px;
+    background-color: #D7D7D7;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border:  2px solid #000000;
+  }
+  
+  .mainImageWrapper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+  }
+  
+  /* Zoom Effect */
+  .mainImageContainer:hover .mainImage {
+    transform: scale(2);
+  }
+  
+  /* Custom Magnifier Cursor */
+  .mainImageContainer:hover {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>') 12 12, auto;
+  }
+  
+  /* Panning Effect */
+  .mainImageContainer {
+    --zoom-x: 50%;
+    --zoom-y: 50%;
+  }
+  
+  .mainImageContainer:hover .mainImage {
+    transform: scale(2) translate(
+      calc((50% - var(--zoom-x)) / 2),
+      calc((50% - var(--zoom-y)) / 2)
+    );
+  }
+  
+  /* Thumbnail Styles */
+  .thumbnailContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff2a;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+  }
+  
+  .thumbnailImageWrapper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .thumbnailImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed from 'contain' to 'cover' */
+  }
+  
+  .thumbnail.selected {
+    border: 1px solid #85DDEA;
+    box-shadow: 0 4px 8px rgba(95, 183, 255, 0.3);
+  }

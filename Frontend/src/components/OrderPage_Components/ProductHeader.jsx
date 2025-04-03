@@ -6,20 +6,30 @@ const ProductHeader = () => {
   return (
     <div className={styles.productHeader}>
       <div className={styles.headerContent}>
-        <h1 className={styles.title}>TESLA SAROS 10</h1>
+        <h1 className={styles.title}>TENANTVOLT SE-10</h1>
         <p className={styles.description}>
-          The Tesla Optimus Gen 2 is A Cutting-Edge Humanoid Robot That Tesla
-          Created To Revolutionize Automation And Human-Robot Interaction.6g
-          Dgdgb Wdwgdg
+          IoT-powered electricity tracking that gives owners control and tenants
+          transparency through real-time usage data and automated billing.
         </p>
 
         <div className={styles.textLines}>
-          <p>Fedvgb Eggelnegapze Geg E Ge Gedefeld Ge Dgacggh</p>
-          <p>Fedvgb Eggelnegapze Geg E Ge Gedefeld Ge Dgacggh</p>
-          <p>Fedvgb Eggelnegapze Geg E Ge Gedefeld Ge Dgacggh</p>
-          <p>Fedvgb Eggelnegapze Geg E Ge Gedefeld Ge Dgacggh</p>
+          <p>
+            <span className={styles.bullet}>•</span> Real-time electricity
+            monitoring per room
+          </p>
+          <p>
+            <span className={styles.bullet}>•</span> Mobile & web access for
+            owners and tenants
+          </p>
+          <p>
+            <span className={styles.bullet}>•</span> Automated billing with
+            usage reports
+          </p>
+          <p>
+            <span className={styles.bullet}>•</span> Remote power control for
+            non-payers
+          </p>
         </div>
-        <hr></hr>
       </div>
 
       <BundleOptions />
