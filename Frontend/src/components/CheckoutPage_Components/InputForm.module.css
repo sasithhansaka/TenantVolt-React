@@ -115,3 +115,49 @@
       font-size: 24px;
     }
   }
+
+
+  /* Tenant Details Section */
+.tenantSection {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #1A1A1A;
+  border-radius: 8px;
+  border: 1px solid #2D2C2C;
+}
+
+.sectionTitle {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.tenantForm {
+  margin-bottom: 25px;
+}
+
+.tenantForm:last-child {
+  margin-bottom: 0;
+}
+
+.tenantTitle {
+  color: #85DDEA;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .tenantSection {
+    padding: 15px;
+  }
+  
+  .sectionTitle {
+    font-size: 16px;
+  }
+  
+  .tenantTitle {
+    font-size: 15px;
+  }
+}

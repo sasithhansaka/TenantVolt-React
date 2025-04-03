@@ -129,12 +129,12 @@ import ProductBox from "../components/OrderPage_Components/ProductBox";
 
 // Animation variants
 const containerVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 80 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.7,
       ease: "easeOut",
       staggerChildren: 0.2
     }
