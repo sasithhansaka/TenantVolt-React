@@ -9,6 +9,8 @@ import BenifitsContainer from "../components/HomePage_Components/BenifitsContain
 import styles from "./HomePage.module.css";
 import Navbar from "./Navbar.jsx";
 import Footer from "../components/FooterPage_Components/Footer.jsx";
+import ModelViewer from "../components/HomePage_Components/ModelViewer.jsx";
+import tenantVoltModel from '../../public/TenantVolt.glb';
 
 const containerVariants = {
   hidden: { opacity: 0, y: 80 },
@@ -41,9 +43,10 @@ function Home() {
           marginTop: "80px",
           height: "700px",
           width: "100%",
-          backgroundColor: "green",
         }}
-      ></motion.div>
+      >
+          <ModelViewer modelPath={tenantVoltModel} />
+      </motion.div>
 
       <motion.div
         ref={benefitsRef}
