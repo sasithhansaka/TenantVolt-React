@@ -14,18 +14,18 @@ const containerVariants = {
       duration: 0.7,
       ease: "easeOut",
       when: "beforeChildren",
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 10 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.3 }
-  }
+    transition: { duration: 0.3 },
+  },
 };
 
 function InputForm({ selectedBundle, quantity }) {
@@ -35,20 +35,26 @@ function InputForm({ selectedBundle, quantity }) {
     mobileNumber: "",
     email: "",
     password: "",
-    tenants: Array(quantity).fill({ name: "", email: "", address: "" })
+    tenants: Array(quantity).fill({ name: "", email: "", address: "" }),
   });
 
+  const [showTenantDetails, setShowTenantDetails] = useState(false);
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
+  const toggleTenantDetails = () => {
+    setShowTenantDetails(!showTenantDetails);
+  };
+
 
   const handleTenantChange = (index, field, value) => {
     const updatedTenants = [...formData.tenants];
     updatedTenants[index] = { ...updatedTenants[index], [field]: value };
-    setFormData(prev => ({ ...prev, tenants: updatedTenants }));
+    setFormData((prev) => ({ ...prev, tenants: updatedTenants }));
   };
 
   const handleSubmit = (e) => {
@@ -57,7 +63,7 @@ function InputForm({ selectedBundle, quantity }) {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className={styles.checkoutContainer}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
@@ -66,11 +72,20 @@ function InputForm({ selectedBundle, quantity }) {
     >
       <div className={styles.checkoutForm}>
         <motion.h1 className={styles.title} variants={itemVariants}>
-          CHECKOUT
+          TENANTVOLT
         </motion.h1>
+        <motion.p className={styles.description} variants={itemVariants}>
+        {/* Account Details<br></br> */}
+          Please fill in your account details.By
+          completing this form, you will be able to secure your TenantVolt
+          product and enjoy the benefits of our exclusive bundles. 
+        </motion.p>
 
         <form onSubmit={handleSubmit}>
-          <motion.div className={styles.nameSection} variants={containerVariants}>
+          <motion.div
+            className={styles.nameSection}
+            variants={containerVariants}
+          >
             <motion.div className={styles.nameField} variants={itemVariants}>
               <label className={styles.label}>First Name</label>
               <input
@@ -140,64 +155,89 @@ function InputForm({ selectedBundle, quantity }) {
             />
           </motion.div>
 
-          {/* Tenant Details Section */}
-          <motion.div className={styles.tenantSection} variants={containerVariants}>
+         {/* Tenant Details Section */}
+        <motion.div
+          className={styles.tenantSection}
+          variants={containerVariants}
+        >
+          <div className={styles.sectionHeader}>
             <motion.h3 className={styles.sectionTitle} variants={itemVariants}>
               Tenant Details
             </motion.h3>
-            {formData.tenants.map((tenant, index) => (
-              <motion.div 
-                key={index} 
-                className={styles.tenantForm}
-                variants={containerVariants}
-                custom={index}
-              >
-                <motion.h4 className={styles.tenantTitle} variants={itemVariants}>
-                  Tenant {index + 1}
-                </motion.h4>
-                <motion.div className={styles.fieldGroup} variants={itemVariants}>
-                  <label className={styles.label}>Full Name</label>
-                  <input
-                    type="text"
-                    value={tenant.name}
-                    onChange={(e) => handleTenantChange(index, 'name', e.target.value)}
-                    placeholder="Tenant's full name"
-                    className={styles.inputField}
-                    required
-                  />
-                </motion.div>
-                <motion.div className={styles.fieldGroup} variants={itemVariants}>
-                  <label className={styles.label}>Email</label>
-                  <input
-                    type="email"
-                    value={tenant.email}
-                    onChange={(e) => handleTenantChange(index, 'email', e.target.value)}
-                    placeholder="tenant@example.com"
-                    className={styles.inputField}
-                    required
-                  />
-                </motion.div>
-                <motion.div className={styles.fieldGroup} variants={itemVariants}>
-                  <label className={styles.label}>Address</label>
-                  <input
-                    type="text"
-                    value={tenant.address}
-                    onChange={(e) => handleTenantChange(index, 'address', e.target.value)}
-                    placeholder="Tenant's address"
-                    className={styles.inputField}
-                    required
-                  />
-                </motion.div>
-              </motion.div>
-            ))}
-          </motion.div>
+            <button
+              type="button"
+              onClick={toggleTenantDetails}
+              className={styles.toggleButton}
+            >
+              {showTenantDetails ? "Hide Details" : "Add Details"}
+            </button>
+          </div>
 
+          {showTenantDetails && (
+            <div className={styles.tenantDetailsContent}>
+              {formData.tenants.map((tenant, index) => (
+                <motion.div
+                  key={index}
+                  className={styles.tenantForm}
+                  variants={containerVariants}
+                  custom={index}
+                >
+                  <motion.h4 className={styles.tenantTitle} variants={itemVariants}>
+                    Tenant {index + 1}
+                  </motion.h4>
+                  <motion.div className={styles.fieldGroup} variants={itemVariants}>
+                    <label className={styles.label}>Full Name</label>
+                    <input
+                      type="text"
+                      value={tenant.name}
+                      onChange={(e) =>
+                        handleTenantChange(index, "name", e.target.value)
+                      }
+                      placeholder="Tenant's full name"
+                      className={styles.inputField}
+                      required
+                    />
+                  </motion.div>
+                  <motion.div className={styles.fieldGroup} variants={itemVariants}>
+                    <label className={styles.label}>Email</label>
+                    <input
+                      type="email"
+                      value={tenant.email}
+                      onChange={(e) =>
+                        handleTenantChange(index, "email", e.target.value)
+                      }
+                      placeholder="tenant@example.com"
+                      className={styles.inputField}
+                      required
+                    />
+                  </motion.div>
+                  <motion.div className={styles.fieldGroup} variants={itemVariants}>
+                    <label className={styles.label}>Address</label>
+                    <input
+                      type="text"
+                      value={tenant.address}
+                      onChange={(e) =>
+                        handleTenantChange(index, "address", e.target.value)
+                      }
+                      placeholder="Tenant's address"
+                      className={styles.inputField}
+                      required
+                    />
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </motion.div>
+
+
+        
           <motion.div variants={itemVariants}>
             <BundleDetails id={selectedBundle} quantity={quantity} />
           </motion.div>
 
-          <motion.button 
-            type="submit" 
+          <motion.button
+            type="submit"
             className={styles.submitButton}
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}

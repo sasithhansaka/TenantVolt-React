@@ -13,7 +13,7 @@ const CheckOutPage = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <InputForm selectedBundle={selectedBundle} quantity={quantity} />
     </div>
   );

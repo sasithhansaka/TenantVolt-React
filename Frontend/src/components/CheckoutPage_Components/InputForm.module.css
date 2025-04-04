@@ -4,7 +4,6 @@
   align-items: center;
   min-height: 100vh;
   background-color: #000; /* Black background */
-  padding: 20px;
 }
 
   .checkoutForm {
@@ -19,10 +18,18 @@
     font-size: 28px;
     font-weight: 700;
     color: #FFF; /* White text */
-    margin-bottom: 30px;
+    margin-bottom: 23px;
     text-align: center;
   }
   
+
+  .description{
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffffce; /* White text */
+    margin-bottom: 20px;
+    /* text-align: center; */
+  }
   /* Name Section - Flex Layout */
   .nameSection {
     display: flex;
@@ -50,7 +57,7 @@
   
   .inputField {
     width: 100%;
-    padding: 20px 25px;
+    padding: 18px 25px;
     background-color: #2D2C2C; /* Input background */
     border: 1px solid #2D2C2C;
     border-radius: 2px;
@@ -87,8 +94,8 @@
   .submitButton {
     width: 100%;
     padding: 14px;
-    background-color: #4a90e2;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 6px;
     font-size: 16px;
@@ -98,7 +105,7 @@
   }
   
   .submitButton:hover {
-    background-color: #3a7bc8;
+    background-color: #e9eaea;
   }
   
   @media (max-width: 768px) {
@@ -115,23 +122,46 @@
       font-size: 24px;
     }
   }
-
-
-  /* Tenant Details Section */
+/* Tenant Details Section */
 .tenantSection {
   margin: 30px 0;
   padding: 20px;
-  background-color: #1A1A1A;
+  background-color: #000000;
   border-radius: 8px;
-  border: 1px solid #2D2C2C;
+  border: 1px solid #8c8b8b24;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .sectionTitle {
   color: #FFFFFF;
   font-size: 18px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #333;
+  margin: 0;
+}
+
+.toggleButton {
+  background-color: transparent;
+  color: #85DDEA;
+  border: 1px solid #85DDEA;
+  border-radius: 4px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggleButton:hover {
+  background-color: rgba(133, 221, 234, 0.1);
+}
+
+.tenantDetailsContent {
+  padding-top: 15px;
+  border-top: 1px solid #333;
 }
 
 .tenantForm {
@@ -144,7 +174,7 @@
 
 .tenantTitle {
   color: #85DDEA;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 15px;
 }
 
@@ -157,7 +187,8 @@
     font-size: 16px;
   }
   
-  .tenantTitle {
-    font-size: 15px;
+  .toggleButton {
+    padding: 6px 12px;
+    font-size: 13px;
   }
 }

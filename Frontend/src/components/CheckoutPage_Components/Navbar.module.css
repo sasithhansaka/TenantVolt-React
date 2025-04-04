@@ -1,16 +1,24 @@
 .navbar {
     width: 100%;
-    background-color: #ffffff; /* Black background */
+    background-color: #000000; /* Black background */
     padding: 15px 0;
     text-align: center; /* Centers the text horizontally */
     display: flex;
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
+    border-bottom: 1px solid #2f2f2fa5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
   }
   
   .logo {
-    color: #000000; /* White text */
-    font-size: 30px; /* Font size as requested */
-    margin: 0; /* Removes default margin */
-    font-weight: normal; /* No bold by default */
+    color: #ffffff; /* White text */
+    font-size: 1.8rem;
+    font-weight: bold;
+    
   }

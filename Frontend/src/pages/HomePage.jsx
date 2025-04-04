@@ -40,8 +40,8 @@ function Home() {
         animate={heroInView ? "visible" : "hidden"}
         variants={containerVariants}
         style={{
-          marginTop: "80px",
-          height: "700px",
+          marginTop: "150px",
+          height: "580px",
           width: "100%",
         }}
       >
