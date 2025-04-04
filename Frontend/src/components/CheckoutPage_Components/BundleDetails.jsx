@@ -14,30 +14,16 @@ function BundleDetails({ id, quantity }) {
   return (
     <div className={styles.bundleContainer}>
       <h2 className={styles.bundleTitle}>Your Order Summary</h2>
-      <div className={styles.bundleContent}>
-        <p className={styles.bundleDetail}>
-          <span className={styles.detailLabel}>Package:</span>
-          <span className={styles.detailValue}>{selectedBundle.title}</span>
-        </p>
-        <p className={styles.bundleDetail}>
-          <span className={styles.detailLabel}>Quantity:</span>
-          <span className={styles.detailValue}>{quantity}</span>
-        </p>
-        <p className={styles.bundleDetail}>
-          <span className={styles.detailLabel}>Unit Price:</span>
-          <span className={styles.detailValue}>{selectedBundle.price}</span>
-        </p>
-        <p className={styles.bundleDetail}>
-          <span className={styles.detailLabel}>Discount:</span>
-          <span className={`${styles.detailValue} ${styles.discount}`}>
-            {selectedBundle.discountAmount}
-          </span>
-        </p>
-        <div className={styles.totalContainer}>
-          <span className={styles.totalLabel}>Total:</span>
-          <span className={styles.totalPrice}>{calculateTotal()}</span>
-        </div>
-      </div>
+      
+      <p className={styles.orderDescription}>
+        The product you've selected is <strong>{selectedBundle.title}</strong> with a quantity of <strong>{quantity}</strong>. 
+        The unit price for this product is <strong>{selectedBundle.price}</strong> and you've received a discount of 
+        <strong className={styles.discount}> {selectedBundle.discountAmount}</strong>.
+      </p>
+      
+      <p className={styles.fullPrice}>
+        TOTAL AMOUNT: {calculateTotal()}
+      </p>
     </div>
   );
 }

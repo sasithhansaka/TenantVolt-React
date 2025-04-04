@@ -1,79 +1,59 @@
 .bundleContainer {
-    background-color: #2d2c2c98;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 25px;
-    border: 1px solid #2D2C2C;
-    margin-top: 60px;
+  background-color: #00000098;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #8c8b8b24;
+  margin-top: 20px;
+}
+
+.bundleTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.orderDescription {
+  font-size: 15px;
+  color: #CCCCCC;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.orderDescription strong {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.discount {
+  color: #FF6B6B;
+}
+
+.fullPrice {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: right;
+  padding-top: 15px;
+  border-top: 1px solid #8c8b8b24;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .bundleContainer {
+    padding: 15px;
   }
   
   .bundleTitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: #FFFFFF;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #333;
-  }
-  
-  .bundleContent {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .bundleDetail {
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-    color: #CCCCCC;
-  }
-  
-  .detailLabel {
-    font-weight: 500;
-  }
-  
-  .detailValue {
-    font-weight: 400;
-  }
-  
-  .shipping {
-    color: #8DF7EE;
-  }
-  
-  .discount {
-    color: #FF6B6B;
-  }
-  
-  .totalContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid #333;
     font-size: 16px;
   }
   
-  .totalLabel {
-    font-weight: 600;
-    color: #FFFFFF;
+  .orderDescription {
+    font-size: 14px;
   }
-  
-  .totalPrice {
-    font-weight: 700;
-    color: #85DDEA;
+
+  .fullPrice {
+    font-size: 16px;
   }
-  
-  @media (max-width: 768px) {
-    .bundleContainer {
-      padding: 15px;
-    }
-    
-    .bundleTitle {
-      font-size: 16px;
-    }
-    
-    .bundleDetail {
-      font-size: 14px;
-    }
-  }
+}
