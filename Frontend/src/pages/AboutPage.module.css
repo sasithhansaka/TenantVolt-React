@@ -71,6 +71,7 @@
 
 .teamSection {
     padding: 4rem 0;
+    border-bottom: 1px solid #eee;
 }
 
 .teamSection h2 {
@@ -111,7 +112,6 @@
 
 .missionSection {
     padding: 4rem 0;
-    background-color: #f9f9f9;
     border-radius: 8px;
     margin: 2rem 0;
 }

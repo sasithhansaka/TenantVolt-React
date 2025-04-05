@@ -34,17 +34,17 @@ const AboutPage = () => {
         {
             title: 'Innovation',
             description: 'We combine IoT technology with smart analytics to revolutionize property management',
-            icon: 'src/assets/icons/ret.svg'
+            icon: 'src/assets/icons/innovation.png'
         },
         {
             title: 'Transparency',
             description: 'We believe in clear, verifiable energy usage data to eliminate conflicts between property owners and tenants',
-            icon: 'src/assets/icons/transparency.svg'
+            icon: 'src/assets/icons/transparency.png'
         },
         {
             title: 'Excellence',
             description: 'Our solutions optimize electricity consumption and reduce waste through precise monitoring',
-            icon: 'src/assets/icons/excellence.svg'
+            icon: 'src/assets/icons/excellence.png'
         }
     ];
 
