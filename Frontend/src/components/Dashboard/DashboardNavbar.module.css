@@ -1,8 +1,8 @@
 .navbar {
     background-color: #5FB7FF;
-    padding: 15px 0;
-    font-family: Arial, sans-serif;
-    color: white;
+    padding: 23px 0 10px 0px;
+    /* font-family: Arial, sans-serif; */
+    color: rgb(0, 0, 0);
   }
   
   .navContainer {
@@ -17,32 +17,33 @@
   
   .navItems {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     position: absolute;
-    left: 50%;
+    left: 70%;
     transform: translateX(-50%);
   }
   
   .navItem {
-    padding: 14px 16px;
-    border-radius: 4px 4px 0 0;
+    padding:8px 23px;
+    border-radius: 14px 14px 0 0;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 500;
   }
   
-  .navItem:hover {
+  /* .navItem:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
-  
+   */
   .active {
     background-color: white;
-    color: #5FB7FF;
-    font-weight: bold;
+    color: #000000;
+    /* font-weight: bold; */
   }
   
   .timeDisplay {
     font-size: 14px;
     font-weight: 500;
     margin-left: auto;
+    padding-left: 40px;
   }

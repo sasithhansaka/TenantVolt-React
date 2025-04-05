@@ -60,6 +60,20 @@ function InputForm({ selectedBundle, quantity }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+
+    setFormData({
+      firstName: "",
+      lastName: "",
+      mobileNumber: "",
+      email: "",
+      password: "",
+      tenants: Array(quantity).fill({ name: "", email: "", address: "" }),
+    });
+    
+    // Also hide tenant details if they were shown
+    setShowTenantDetails(false);
+
+    
   };
 
   return (
@@ -231,7 +245,7 @@ function InputForm({ selectedBundle, quantity }) {
         </motion.div>
 
 
-        
+
           <motion.div variants={itemVariants}>
             <BundleDetails id={selectedBundle} quantity={quantity} />
           </motion.div>

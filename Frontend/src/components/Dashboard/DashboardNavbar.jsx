@@ -12,14 +12,13 @@ function DashboardNavbar({ activeTab, setActiveTab }) {
   }, []);
 
   const formatTime = (date) => {
-    const options = { 
-      year: 'numeric', 
-      month: 'short', 
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    };
-    return date.toLocaleDateString('en-US', options);
+    const year = date.getFullYear();
+    const month = date.toLocaleString('default', { month: 'short' });
+    const day = date.getDate();
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    
+    return `${year} ${month} ${day} - ${hours}:${minutes}`;
   };
 
   return (
