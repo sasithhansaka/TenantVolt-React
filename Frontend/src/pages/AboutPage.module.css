@@ -71,6 +71,7 @@
 
 .teamSection {
     padding: 4rem 0;
+    border-bottom: 1px solid #eee;
 }
 
 .teamSection h2 {
@@ -106,5 +107,64 @@
 
     .teamGrid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+.missionSection {
+    padding: 4rem 0;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.missionSection h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.missionContent {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.missionStatement {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.missionPoints {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.missionPoint {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.missionPoint h3 {
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.missionPoint p {
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .missionPoints {
+        grid-template-columns: 1fr;
+    }
+
+    .missionStatement {
+        padding: 0 1rem;
     }
 }
