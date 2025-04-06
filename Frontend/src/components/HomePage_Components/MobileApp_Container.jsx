@@ -42,7 +42,7 @@ function MobileApp_Container() {
     <div className={styles.container}>
       <div style={{ display: "flex", gap: "0px" }}>
         <div className={styles.container_div}>
-          <h4>Saros Mobile App</h4>
+          <h4>TENANTVOLT Mobile App</h4>
           <div className={styles.timeslot}>
             <span>
               {timeLeft.days} <br></br>Days
@@ -59,11 +59,10 @@ function MobileApp_Container() {
             </span>
           </div>
           <p className={styles.mobileApp_description}>
-            The TENANVOLT Mobile App will launch on April 25, 2025,
+            The TENANTVOLT Mobile App will launch on April 25, 2025,
             enabling boarding house owners and tenants to track real-time power
             usage, receive consumption alerts, and manage payments directly from
-            their smartphones, providing convenient, on-the-go access to fair
-            billing and energy savings.
+            their smartphones.
           </p>
           <div className={styles.comingSoon_button}>
             <p className={styles.comingSoon_button_text}>Coming Soon</p>
@@ -73,7 +72,7 @@ function MobileApp_Container() {
           </div>
         </div>
         <div>
-          <img
+          {/* <img
             className={styles.mobileApp_image}
             src="./src/images/Mobile app.png"
             alt=""
@@ -83,7 +82,7 @@ function MobileApp_Container() {
               marginTop: "-18px",
               marginLeft: "-60px",
             }}
-          />
+          /> */}
         </div>
         <div></div>
       </div>

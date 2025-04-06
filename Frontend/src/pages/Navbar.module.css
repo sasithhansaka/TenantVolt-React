@@ -22,7 +22,7 @@
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #ffffff;
   margin-right: auto; /* Pushes nav items to the right */
@@ -30,8 +30,9 @@
 
 .navItems {
   display: flex;
-  gap: 1.5rem; /* Reduced from 2rem */
+  gap: 3rem; /* Reduced from 2rem */
   padding-left: 1rem; /* Optional: small padding between logo and first item */
+  padding-right: 3rem;
 }
 
 /* Rest of your existing styles... */
@@ -39,11 +40,12 @@
 /* Add this to your existing CSS */
 .navLink {
   text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
+  color: #ffffffe9;
+  font-weight: 400;
   transition: all 0.3s ease;
   position: relative;
   padding-bottom: 4px;
+  font-size: 15px;
 }
 
 .navLink:hover {

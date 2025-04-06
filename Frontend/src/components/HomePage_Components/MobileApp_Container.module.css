@@ -1,9 +1,9 @@
 .container{
-    width: 1290px;
+    width: 1210px;
     height: 465px;
     background-color: #121212;
-    margin-left: 120px;
-    margin-top: 150px;
+    margin-left: 140px;
+    margin-top: 200px;
     border-radius: 20px;
     gap: 20px;
     padding: 40px;
@@ -24,8 +24,9 @@
 .container_div .mobileApp_description{
     color: #ffffff;
     margin-top: 30px;
-    opacity: 0.6;
+    opacity: 0.8;
     font-size: 16px;
+    line-height: 29px;
 
 }
 
@@ -58,7 +59,7 @@
    gap: 10px;
    justify-content: center;
    align-items: center;
-   margin-top: 35px;
+   margin-top: 25px;
 }
 
 .comingSoon_button .comingSoon_button_text{

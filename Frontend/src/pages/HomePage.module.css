@@ -1,6 +1,6 @@
 .featuresContainer {
   width: 100%;
-  height: 890px;
+  height: 950px;
   display: flex;
   gap: 20px;
   color: rgb(255, 255, 255);
@@ -11,19 +11,25 @@
 .featuresContainer h1{
     color: #85DDEA;
     padding: 10px 0px 4px 0px;
+    font-weight: 600;
+    margin-bottom:10px;
 
 }
 .features{
     width: 50%;
     height: 100%;
-    margin-left: 120px;
-    margin-top: 40px;
+    margin-left: 150px;
+    margin-top: 70px;
 }
 
 .features p{
     font-size: 15px;
+    /* margin-top: 15px; */
+    color: rgb(196, 196, 196);
 }
 
 .featuresContainer h4{
     padding: 40px 40px 20px ;
+    font-weight: 400;
+    color: rgb(196, 196, 196);
 }

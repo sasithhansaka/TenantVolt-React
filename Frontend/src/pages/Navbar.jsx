@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
-        <div className={styles.logo}>TENANVOLT</div>
+        <div className={styles.logo}>TENANTVOLT</div>
         <div className={styles.navItems}>
           <a
             href="/"

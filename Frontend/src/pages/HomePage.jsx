@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import FeaturesContainer from "../components/HomePage_Components/FeaturesContainer.jsx";
 import MobileApp_Container from "../components/HomePage_Components/MobileApp_Container.jsx";
 import { featureImages, featureTitles, featureContent } from "../data/FeatureData.jsx";
-import { images, titles, content } from "../data/BenifitsData.jsx";
+import { icons, titles, content } from "../data/BenifitsData.jsx";
 import BenifitsContainer from "../components/HomePage_Components/BenifitsContainer.jsx";
 import styles from "./HomePage.module.css";
 import Navbar from "./Navbar.jsx";
@@ -18,7 +18,7 @@ const containerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.7,
+      duration: 0.5,
       ease: "easeOut"
     }
   }
@@ -34,7 +34,7 @@ function Home() {
     <div>
       <Navbar />
       
-      <motion.div
+      {/* <motion.div
         ref={heroRef}
         initial="hidden"
         animate={heroInView ? "visible" : "hidden"}
@@ -46,7 +46,7 @@ function Home() {
         }}
       >
           <ModelViewer modelPath={tenantVoltModel} />
-      </motion.div>
+      </motion.div> */}
 
       <motion.div
         ref={benefitsRef}
@@ -54,7 +54,7 @@ function Home() {
         animate={benefitsInView ? "visible" : "hidden"}
         variants={containerVariants}
       >
-        <BenifitsContainer images={images} titles={titles} content={content} />
+        <BenifitsContainer icons={icons} titles={titles} content={content} />
       </motion.div>
 
       <motion.div
@@ -79,7 +79,7 @@ function Home() {
             animate={featuresInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2 }}
           >
-            BRAND for teams/corporates
+            TENANTVOLT for teams/corporates
           </motion.h1>
           
           <motion.p
