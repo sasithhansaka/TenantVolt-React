@@ -1,20 +1,20 @@
 .userDetailsContainer {
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     border-radius: 8px;
-    font-family: 'Arial', sans-serif;
+    /* font-family: 'Arial', sans-serif; */
   }
   
   .welcomeText {
-    font-size: 24px;
+    font-size: 34px;
     color: #333;
     margin: 0 0 15px 0;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
   
   .description {
-    font-size: 16px;
+    font-size: 15px;
     color: #555;
     margin: 0 0 10px 0;
     line-height: 1.5;

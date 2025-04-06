@@ -1,35 +1,40 @@
 .tenantSection {
-    margin: 3rem 0;
-    width: 100%;
-    /* background-color: aqua; */
+    width: 80%;
+    margin-left: 80px;
+    margin-top: 20px;
   }
   
+
+  .sectionTitle{
+    font-size: 1.3rem;
+    color: #0865b2;
+    margin-bottom: 10px;
+  }
   .tenantTableContainer {
     overflow-x: auto;
-    margin-top: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #0865b27d;
   }
 
   .description {
     color: #555;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
-    max-width: 800px;
+    margin-bottom: 30px;
+  
   }
   
   
   .tenantTable {
-    width: 100%;
+    width:100%;
     border-collapse: collapse;
-    background: white;
+    /* margin-top: 30px; */
+    /* background: white; */
   }
   
   .tenantTable th,
   .tenantTable td {
-    padding: 1rem;
+    padding: 1.02rem;
     text-align: left;
     border-bottom: 1px solid #0865b233;
   }

@@ -26,11 +26,12 @@ function DashboardHome() {
           {USERSTATUS === "pending" ? (
             <Deliverystatus ORDERDATE={ORDERDATE} />
           ) : USERSTATUS === "completed" ? (
-            <OrderDetails 
-            userData={userData}
-            orderStatus={USERSTATUS}
-            orderDate={ORDERDATE}
-          />          ) : null}
+            <OrderDetails
+              userData={userData}
+              orderStatus={USERSTATUS}
+              orderDate={ORDERDATE}
+            />
+          ) : null}
         </div>
         <div>
           <TenantDetails tenants={tenants} />

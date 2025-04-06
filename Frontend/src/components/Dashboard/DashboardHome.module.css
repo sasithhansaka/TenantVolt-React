@@ -1,5 +1,9 @@
 .dashboardHome{
     background-color: rgb(255, 255, 255);
     color: black;
-    height: 1000px;
+    height: auto;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
 }

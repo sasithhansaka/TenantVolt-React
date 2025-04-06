@@ -6,6 +6,7 @@ function Details() {
     <div className={styles.details}>
       <h2>Dashboard Details</h2>
       <p>Detailed dashboard information goes here</p>
+      
     </div>
   );
 }
