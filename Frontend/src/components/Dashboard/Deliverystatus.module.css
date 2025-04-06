@@ -1,11 +1,10 @@
 .deliveryStatus {
     width: 280px;
     height: 390px;
-    background-color: #ffffff;
+    background-color: #ff0000;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
   }
   
   .title {

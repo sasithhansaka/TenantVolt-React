@@ -1,0 +1,57 @@
+.tenantSection {
+    margin: 3rem 0;
+    width: 100%;
+    /* background-color: aqua; */
+  }
+  
+  .tenantTableContainer {
+    overflow-x: auto;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #0865b27d;
+  }
+
+  .description {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+  }
+  
+  
+  .tenantTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+  }
+  
+  .tenantTable th,
+  .tenantTable td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #0865b233;
+  }
+  
+  .tenantTable th {
+    background-color: #0865b224;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .tenantTable tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .tenantTable td {
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .tenantTable th,
+    .tenantTable td {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+  }
