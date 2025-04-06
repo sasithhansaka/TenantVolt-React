@@ -4,6 +4,7 @@
     justify-content: center;
     padding: 4rem 0;
     background-color: #000000;
+    margin-top: 130px;
 }
 
 .faqContainer {
@@ -29,7 +30,7 @@
 .faqItem {
     border: 1.5px solid #ffffff;
     border-radius: 25px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     overflow: hidden;
     transition: all 0.3s ease;
 }

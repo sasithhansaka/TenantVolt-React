@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styles from "./InputForm.module.css";
 import BundleDetails from "./BundleDetails";
+import axios from "axios";
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0, y: 80 },
   visible: {
@@ -35,6 +35,7 @@ function InputForm({ selectedBundle, quantity }) {
     mobileNumber: "",
     email: "",
     password: "",
+    address: "", // Added address field
     tenants: Array(quantity).fill({ name: "", email: "", address: "" }),
   });
 
@@ -50,31 +51,89 @@ function InputForm({ selectedBundle, quantity }) {
     setShowTenantDetails(!showTenantDetails);
   };
 
-
   const handleTenantChange = (index, field, value) => {
     const updatedTenants = [...formData.tenants];
     updatedTenants[index] = { ...updatedTenants[index], [field]: value };
     setFormData((prev) => ({ ...prev, tenants: updatedTenants }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-
-    setFormData({
-      firstName: "",
-      lastName: "",
-      mobileNumber: "",
-      email: "",
-      password: "",
-      tenants: Array(quantity).fill({ name: "", email: "", address: "" }),
-    });
+  
+    const requiredFields = [
+      { field: "firstName", name: "First Name" },
+      { field: "lastName", name: "Last Name" },
+      { field: "mobileNumber", name: "Mobile Number" },
+      { field: "email", name: "Email" },
+      { field: "password", name: "Password" },
+      { field: "address", name: "Address" }
+    ];
+  
+    const missingFields = requiredFields.filter(f => !formData[f.field].trim());
     
-    // Also hide tenant details if they were shown
-    setShowTenantDetails(false);
-
+    if (missingFields.length > 0) {
+      alert(`Please fill in all required fields:\n${missingFields.map(f => f.name).join('\n')}`);
+      return;
+    }
+  
+    const data = {
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      mobile_number: formData.mobileNumber,
+      email: formData.email,
+      password: formData.password,
+      address: formData.address,
+      tenants: showTenantDetails ? formData.tenants.map(tenant => ({
+        name: tenant.name,
+        email: tenant.email,
+        address: tenant.address
+      })) : []
+    };
+  
+    console.log("Submitting:", JSON.stringify(data, null, 2));
+  
+    try {
+      const response = await axios.post(
+        "https://tenantvolt-5cd875450cc3.herokuapp.com/api/auth/signup/",
+        data,
+       
+      );
+  
+      console.log("Signup successful:", response.data);
+      alert("Registration Successful!");
+  
+      setFormData({
+        firstName: "",
+        lastName: "",
+        mobileNumber: "",
+        email: "",
+        password: "",
+        address: "",
+        tenants: Array(quantity).fill({ name: "", email: "", address: "" }),
+      });
+  
+      setShowTenantDetails(false);
+  
+    } catch (err) {
+      console.error("Full error details:", {
+        config: err.config,
+        request: err.request,
+        response: err.response?.data
+      });
     
+      if (err.response?.data?.error) {
+        alert(err.response.data.error); // Show only the backend error message
+      } 
+      else if (err.response?.data?.message) {
+        alert(err.response.data.message); // Show only the backend message
+      }
+      else {
+        // Fallback to generic error if no backend message exists
+        alert("An error occurred. Please try again.");
+      }
+    }
   };
+
 
   return (
     <motion.div
@@ -89,10 +148,10 @@ function InputForm({ selectedBundle, quantity }) {
           TENANTVOLT
         </motion.h1>
         <motion.p className={styles.description} variants={itemVariants}>
-        {/* Account Details<br></br> */}
-          Please fill in your account details.By
-          completing this form, you will be able to secure your TenantVolt
-          product and enjoy the benefits of our exclusive bundles. 
+          {/* Account Details<br></br> */}
+          Please fill in your account details.By completing this form, you will
+          be able to secure your TenantVolt product and enjoy the benefits of
+          our exclusive bundles.
         </motion.p>
 
         <form onSubmit={handleSubmit}>
@@ -125,6 +184,18 @@ function InputForm({ selectedBundle, quantity }) {
                 required
               />
             </motion.div>
+          </motion.div>
+          <motion.div className={styles.fieldGroup} variants={itemVariants}>
+            <label className={styles.label}>Your Address</label>
+            <input
+              type="text"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              placeholder="123 Main St, City, Country"
+              className={styles.inputField}
+              required
+            />
           </motion.div>
 
           <motion.div className={styles.fieldGroup} variants={itemVariants}>
@@ -169,82 +240,95 @@ function InputForm({ selectedBundle, quantity }) {
             />
           </motion.div>
 
-         {/* Tenant Details Section */}
-        <motion.div
-          className={styles.tenantSection}
-          variants={containerVariants}
-        >
-          <div className={styles.sectionHeader}>
-            <motion.h3 className={styles.sectionTitle} variants={itemVariants}>
-              Tenant Details
-            </motion.h3>
-            <button
-              type="button"
-              onClick={toggleTenantDetails}
-              className={styles.toggleButton}
-            >
-              {showTenantDetails ? "Hide Details" : "Add Details"}
-            </button>
-          </div>
-
-          {showTenantDetails && (
-            <div className={styles.tenantDetailsContent}>
-              {formData.tenants.map((tenant, index) => (
-                <motion.div
-                  key={index}
-                  className={styles.tenantForm}
-                  variants={containerVariants}
-                  custom={index}
-                >
-                  <motion.h4 className={styles.tenantTitle} variants={itemVariants}>
-                    Tenant {index + 1}
-                  </motion.h4>
-                  <motion.div className={styles.fieldGroup} variants={itemVariants}>
-                    <label className={styles.label}>Full Name</label>
-                    <input
-                      type="text"
-                      value={tenant.name}
-                      onChange={(e) =>
-                        handleTenantChange(index, "name", e.target.value)
-                      }
-                      placeholder="Tenant's full name"
-                      className={styles.inputField}
-                      required
-                    />
-                  </motion.div>
-                  <motion.div className={styles.fieldGroup} variants={itemVariants}>
-                    <label className={styles.label}>Email</label>
-                    <input
-                      type="email"
-                      value={tenant.email}
-                      onChange={(e) =>
-                        handleTenantChange(index, "email", e.target.value)
-                      }
-                      placeholder="tenant@example.com"
-                      className={styles.inputField}
-                      required
-                    />
-                  </motion.div>
-                  <motion.div className={styles.fieldGroup} variants={itemVariants}>
-                    <label className={styles.label}>Address</label>
-                    <input
-                      type="text"
-                      value={tenant.address}
-                      onChange={(e) =>
-                        handleTenantChange(index, "address", e.target.value)
-                      }
-                      placeholder="Tenant's address"
-                      className={styles.inputField}
-                      required
-                    />
-                  </motion.div>
-                </motion.div>
-              ))}
+          {/* Tenant Details Section */}
+          <motion.div
+            className={styles.tenantSection}
+            variants={containerVariants}
+          >
+            <div className={styles.sectionHeader}>
+              <motion.h3
+                className={styles.sectionTitle}
+                variants={itemVariants}
+              >
+                Tenant Details
+              </motion.h3>
+              <button
+                type="button"
+                onClick={toggleTenantDetails}
+                className={styles.toggleButton}
+              >
+                {showTenantDetails ? "Hide Details" : "Add Details"}
+              </button>
             </div>
-          )}
-        </motion.div>
 
-
+            {showTenantDetails && (
+              <div className={styles.tenantDetailsContent}>
+                {formData.tenants.map((tenant, index) => (
+                  <motion.div
+                    key={index}
+                    className={styles.tenantForm}
+                    variants={containerVariants}
+                    custom={index}
+                  >
+                    <motion.h4
+                      className={styles.tenantTitle}
+                      variants={itemVariants}
+                    >
+                      Tenant {index + 1}
+                    </motion.h4>
+                    <motion.div
+                      className={styles.fieldGroup}
+                      variants={itemVariants}
+                    >
+                      <label className={styles.label}>Full Name</label>
+                      <input
+                        type="text"
+                        value={tenant.name}
+                        onChange={(e) =>
+                          handleTenantChange(index, "name", e.target.value)
+                        }
+                        placeholder="Tenant's full name"
+                        className={styles.inputField}
+                        required
+                      />
+                    </motion.div>
+                    <motion.div
+                      className={styles.fieldGroup}
+                      variants={itemVariants}
+                    >
+                      <label className={styles.label}>Email</label>
+                      <input
+                        type="email"
+                        value={tenant.email}
+                        onChange={(e) =>
+                          handleTenantChange(index, "email", e.target.value)
+                        }
+                        placeholder="tenant@example.com"
+                        className={styles.inputField}
+                        required
+                      />
+                    </motion.div>
+                    <motion.div
+                      className={styles.fieldGroup}
+                      variants={itemVariants}
+                    >
+                      <label className={styles.label}>Address</label>
+                      <input
+                        type="text"
+                        value={tenant.address}
+                        onChange={(e) =>
+                          handleTenantChange(index, "address", e.target.value)
+                        }
+                        placeholder="Tenant's address"
+                        className={styles.inputField}
+                        required
+                      />
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+          </motion.div>
 
           <motion.div variants={itemVariants}>
             <BundleDetails id={selectedBundle} quantity={quantity} />
@@ -266,3 +350,5 @@ function InputForm({ selectedBundle, quantity }) {
 }
 
 export default InputForm;
+
+
