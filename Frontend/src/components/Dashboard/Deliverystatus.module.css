@@ -1,10 +1,12 @@
 .deliveryStatus {
     width: 280px;
-    height: 390px;
-    background-color: #ff0000;
+    height: 330px;
+    background-color: #c1d9fd3b;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-bottom: 40px;
   }
   
   .title {
@@ -36,15 +38,16 @@
     margin-top: 5px;
     position: relative;
     z-index: 2;
+    background-color: #c1d9fd;
   }
   
   .activeDot {
-    background-color: #4CAF50;
+    background-color: #c1d9fd;
     border: 2px solid #81C784;
   }
   
   .inactiveDot {
-    background-color: #9E9E9E;
+    background-color: #c1d9fd;
     border: 2px solid #E0E0E0;
   }
   

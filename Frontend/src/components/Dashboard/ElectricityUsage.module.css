@@ -1,9 +1,4 @@
-/* ElectricityUsag.module.css */
 
-.container {
-    /* display: block; */
-    /* font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; */
-}
 
 .electricityUsageContainer {
     /* max-width: 1200px; */
@@ -47,7 +42,7 @@
 
 .viewModeSelector {
     display: flex;
-    background-color: #f8f9fa;
+    background-color: #d1d3d5;
     border-radius: 8px;
     margin-bottom: 2rem;
     overflow: hidden;
@@ -72,11 +67,11 @@
 
 .modeOption:hover {
     background-color: #e0e0e0;
-    color: #3498db;
+    color: #434343;
 }
 
 .modeOption.active {
-    background-color: #3498db;
+    background-color: #626262;
     color: white;
 }
 
@@ -142,7 +137,7 @@
 }
 
 .fetchDataBtn:hover {
-    background-color: #34c5db;
+    background-color: #3498db;
 }
 
 .fetchDataBtn i {
