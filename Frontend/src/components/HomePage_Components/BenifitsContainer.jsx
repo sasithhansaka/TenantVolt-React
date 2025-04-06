@@ -6,7 +6,7 @@ function BenifitsContainer({ icons, titles, content }) {
     <div>
       <div className={styles.benifitsContainer}>
         <h1>
-          Why<b> TENANVOLT</b> Is Awesome?
+          Why<b> TENANTVOLT</b> Is Awesome?
         </h1>
         <div className={styles.benefits}>
           {icons.map((icon, index) => (

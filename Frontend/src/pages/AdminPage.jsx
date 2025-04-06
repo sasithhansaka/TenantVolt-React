@@ -233,7 +233,7 @@ const AdminPage = () => {
                             <strong>Email:</strong> {tenant.email}
                           </p>
                           <p>
-                            <strong>Product ID:</strong> {tenant.product_id}
+                            {/* <strong>Product ID:</strong> {tenant.product_id} */}
                           </p>
                         </div>
                       </div>
