@@ -12,7 +12,6 @@ function OrderDetails({ userData, orderStatus, orderDate }) {
       </div>
       
       <div className={styles.detailsGrid}>
-        {/* Owner Information */}
         <div className={styles.detailSection}>
           <h3 className={styles.subtitle}>
             <span className={styles.icon}>👤</span> Owner Information
