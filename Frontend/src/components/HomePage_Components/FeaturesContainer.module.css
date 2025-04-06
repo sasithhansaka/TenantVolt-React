@@ -1,5 +1,5 @@
 .oneFeature {
-  width: 800px;
+  width: 750px;
   height: 600px;
   padding: 5px;
   color: #ffffff;
@@ -10,7 +10,7 @@
 
 .oneFeature img {
   border-radius: 20px 20px 0px 0px;
-  width: 790px;
+  width: 740px;
   height: 400px;
   object-fit: cover;
 

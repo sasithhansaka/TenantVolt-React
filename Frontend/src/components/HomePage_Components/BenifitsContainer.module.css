@@ -20,34 +20,46 @@
 }
 
 .benefit{
-    width:285px ;
-    height: 385px;
+    width:280px ;
+    height: 360px;
     background-color: #D7D7D7;
     margin-top: 30px;
     border-radius: 20px;
 }
 
 .benefit .icon{
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background-color: #E9E9E9;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 35px;
+    margin-top: 25px;
     margin-left: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
-.benefit .icon img{
-    width: 53px;
-    height: 53px;
+.benefit .icon i {
+    font-size: 29px;
+    color: #303030;
+    transition: all 0.3s ease-in-out; 
 }
+
+.benefit .icon:hover{
+    background-color: #000000;
+    cursor: pointer;
+}
+.benefit .icon:hover i {
+    color: #FFFFFF;
+}
+
+
 
 .benefit .title{
     color: #000000;
-    font-weight:700;
-    font-size: 23px;
+    font-weight:600;
+    font-size: 22px;
     font-family: "Poppins", sans-serif;
     margin-left: 24px;
     margin-top: 20px;
@@ -55,12 +67,12 @@
 
 .benefit .content{
     color: #000000;
-    font-weight:500;
-    font-size: 17px;
+    font-weight:400;
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
     opacity: 0.7;
     margin-left: 24px;
     margin-top: 15px;
     margin-right:15px;
-    line-height: 26px;
+    line-height: 27px;
 }

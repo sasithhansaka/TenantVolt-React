@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./BenifitsContainer.module.css";
 
-function BenifitsContainer({ images, titles, content }) {
+function BenifitsContainer({ icons, titles, content }) {
   return (
     <div>
       <div className={styles.benifitsContainer}>
@@ -9,17 +9,16 @@ function BenifitsContainer({ images, titles, content }) {
           Why<b> TENANVOLT</b> Is Awesome?
         </h1>
         <div className={styles.benefits}>
-          {images.map((image, index) => (
+          {icons.map((icon, index) => (
             <div
               key={index}
               className={styles.benefit}
-              style={index === 1 ? { height: "350px" } : {}}
+              style={index === 1 ? { height: "330px" } : {}}
             >
-              <div className={styles.icon}>
-                <img src={image} alt="feature1" />
-              </div>
+              <div className={styles.icon}>{icon}</div>
               <p className={styles.title}>
-                {titles[index].split(" ").slice(0, 2).join(" ")} <br /> {titles[index].split(" ").slice(2).join(" ")}
+                {titles[index].split(" ").slice(0, 2).join(" ")} <br />{" "}
+                {titles[index].split(" ").slice(2).join(" ")}
               </p>
               <p className={styles.content}>{content[index]}</p>
             </div>
