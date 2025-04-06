@@ -8,6 +8,7 @@ import OrderPage from "./pages/OrderPage";
 import CheckOutPage from "./pages/CheckOutPage";
 import AboutPage from "./pages/AboutPage";
 import Dashboard from "./pages/Dashboard";
+import ContactPage from "./pages/ContactPage.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/checkout" element={<CheckOutPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NoteFound />} />
         </Routes>
       </Router>
