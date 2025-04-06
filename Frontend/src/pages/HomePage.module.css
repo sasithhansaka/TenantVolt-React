@@ -1,6 +1,7 @@
 .featuresContainer {
   width: 100%;
   height: 950px;
+  margin-top: 50px;
   display: flex;
   gap: 20px;
   color: rgb(255, 255, 255);

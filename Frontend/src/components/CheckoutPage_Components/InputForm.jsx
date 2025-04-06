@@ -122,13 +122,12 @@ function InputForm({ selectedBundle, quantity }) {
       });
     
       if (err.response?.data?.error) {
-        alert(err.response.data.error); // Show only the backend error message
+        alert(err.response.data.error); 
       } 
       else if (err.response?.data?.message) {
-        alert(err.response.data.message); // Show only the backend message
+        alert(err.response.data.message); 
       }
       else {
-        // Fallback to generic error if no backend message exists
         alert("An error occurred. Please try again.");
       }
     }
@@ -148,7 +147,6 @@ function InputForm({ selectedBundle, quantity }) {
           TENANTVOLT
         </motion.h1>
         <motion.p className={styles.description} variants={itemVariants}>
-          {/* Account Details<br></br> */}
           Please fill in your account details.By completing this form, you will
           be able to secure your TenantVolt product and enjoy the benefits of
           our exclusive bundles.
@@ -240,7 +238,6 @@ function InputForm({ selectedBundle, quantity }) {
             />
           </motion.div>
 
-          {/* Tenant Details Section */}
           <motion.div
             className={styles.tenantSection}
             variants={containerVariants}
