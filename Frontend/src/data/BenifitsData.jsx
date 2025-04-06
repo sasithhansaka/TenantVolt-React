@@ -1,8 +1,12 @@
-export const images = [
-  './src/images/Flag.png',
-  './src/images/Dollar.png',
-  './src/images/Blur.png',
-  './src/images/Alarm Clock.png',
+export const icons = [
+  // './src/images/Flag.png',
+  // './src/images/Dollar.png',
+  // './src/images/Blur.png',
+  // './src/images/Alarm Clock.png',
+  <i class="fa-solid fa-flag"></i>,
+  <i class="fa-solid fa-clock"></i>,
+  <i class="fa-solid fa-dollar-sign"></i>,
+  <i class="fa-solid fa-flag"></i>,
 ];
 
 export const titles = [

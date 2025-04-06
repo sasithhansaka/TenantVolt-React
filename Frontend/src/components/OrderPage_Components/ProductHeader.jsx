@@ -25,10 +25,10 @@ const ProductHeader = () => {
             <span className={styles.bullet}>•</span> Automated billing with
             usage reports
           </p>
-          <p>
+          {/* <p>
             <span className={styles.bullet}>•</span> Remote power control for
             non-payers
-          </p>
+          </p> */}
         </div>
       </div>
 
