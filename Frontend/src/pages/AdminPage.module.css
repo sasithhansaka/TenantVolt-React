@@ -1,0 +1,132 @@
+.adminContainer {
+    padding: 4rem;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+  
+  .section {
+    margin-bottom: 3rem;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ordersList {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .orderCard {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .orderCard:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orderHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+  
+  .toggleButton {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .toggleButton:hover {
+    background: #2980b9;
+  }
+  
+  .tenantsSection {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .tenantRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .tenantInfo {
+    flex: 1;
+  }
+  
+  .productIdInput {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .productIdInput label {
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .productIdInput input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .completeButton {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .completeButton:hover {
+    background: #27ae60;
+  }
+  
+  .completeButton:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
