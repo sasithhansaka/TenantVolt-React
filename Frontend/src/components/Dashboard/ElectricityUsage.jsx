@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./ElectricityUsage.module.css";
+import ExplanationCards from "./ExplanationCards ";
+
 
 const ElectricityUsage = () => {
   const chartRef = useRef(null);
@@ -625,6 +627,13 @@ const containerVariants = {
         </motion.div>
       )}
     </AnimatePresence>
+    <motion.div 
+        className={styles.billExplanation}
+        variants={itemVariants}
+      >
+        {/* <h2 className={styles.sectionTitle} style={{marginTop:'120px'}}>Understanding Your Bill</h2> */}
+        <ExplanationCards />
+      </motion.div>
   </motion.div>
 );
 };
