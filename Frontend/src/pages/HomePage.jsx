@@ -34,19 +34,19 @@ function Home() {
     <div>
       <Navbar />
       
-      {/* <motion.div
+      <motion.div
         ref={heroRef}
         initial="hidden"
         animate={heroInView ? "visible" : "hidden"}
         variants={containerVariants}
         style={{
           marginTop: "150px",
-          height: "580px",
+          height: "650px",
           width: "100%",
         }}
       >
           <ModelViewer modelPath={tenantVoltModel} />
-      </motion.div> */}
+      </motion.div>
 
       <motion.div
         ref={benefitsRef}
