@@ -1,20 +1,23 @@
 export const featureImages = [
-    './src/images/Dashboard.png',
-    './src/images/Dashboard2.png',
-    './src/images/Dashboard.png',
-    './src/images/Dashboard2.png',
-  ];
-  
-  export const featureTitles = [
-    'Auto ML',
-    'Monthly Fees',
-    'Auto ML',
-    'Real Time Monitoring',
-  ];
-  
-  export const featureContent = [
-    'Revolutionize the handling of machine learning problems by automating critical steps, significantly reducing the need for human intervention and simplifying complex tasks. This advanced module enhances business efficiency and effectiveness by streamlining processes based on user input.Revolutionize the handling of machine learning problems by automating critical steps',
-    'One Brand Name Card And Unlimited Various Things. Enjoy All The Day With Us steps, significantly reducing the need for human intervention and simplifying complex tasks. This advanced module enhances business efficiency and effectiveness by streamlining processes based on user input.Revolutionize the handling of machine learning problems by automating critical step .',
-    'Owners Can Monitor Energy Usage Remotely, Improving Decision-Making And Operational Efficiency  steps, significantly reducing the need for human intervention and simplifying complex tasks. This advanced module enhances business efficiency and effectiveness by streamlining processes based on user input.Revolutionize the handling of machine learning problems by automating critical step.',
-    'Get instant updates on energy usage, allowing for quicker responses and better time management steps, significantly reducing the need for human intervention and simplifying complex tasks. This advanced module enhances business efficiency and effectiveness by streamlining processes based on user input.Revolutionize the handling of machine learning problems by automating critical step.',
-  ];
+  './src/images/dashboard1.png',
+  './src/images/dashboard3.png',
+  './src/images/dashboard1.png',
+  './src/images/dashboard2.png',
+];
+
+export const featureTitles = [
+  'User-Friendly Dashboard',
+  'Easy Billing',
+  'Tenants Management',
+  'Real Time Monitoring',
+];
+
+export const featureContent = [
+  `Our intuitive dashboard provides property owners with a comprehensive yet easy-to-navigate control center for all energy management needs. Designed with user experience at its core, the interface offers customizable widgets, at-a-glance analytics, and seamless navigation between properties.`,
+
+  `Transform your billing process with our automated, error-proof system that handles all calculations and generates accurate invoices with zero manual effort. The platform supports multiple billing cycles, tracks payment histories, and sends automated reminders to tenants. Customize billing rules by property or tenant, apply discounts or surcharges with one click, and export financial reports for accounting purposes.`,
+
+  `Take complete control of your tenant relationships with our powerful management tools. Create individual energy profiles for each tenant, set custom usage limits, and monitor consumption patterns in detail. The system allows bulk operations for adding multiple tenants, automated lease period tracking, and document storage for contracts and agreements. Communicate directly through the integrated messaging system. `,
+
+  `Our real-time monitoring system delivers instant visibility into your properties' energy usage with second-by-second updates. Sophisticated analytics detect unusual consumption patterns, alerting you to potential issues before they become problems. Track multiple properties simultaneously through the interactive map view, compare performance across locations, and access historical data for trend analysis.`
+];

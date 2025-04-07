@@ -14,6 +14,11 @@ function LoginForm() {
     e.preventDefault();
     // console.log({ email, password });
 
+    if(!email || !password) {
+      alert("Please fill in all fields");
+      return;
+    }
+
     try {
       const response = await axios.post(
         "https://tenantvolt-5cd875450cc3.herokuapp.com/api/auth/login/",

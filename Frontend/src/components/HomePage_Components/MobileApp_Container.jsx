@@ -72,7 +72,7 @@ function MobileApp_Container() {
           </div>
         </div>
         <div>
-          {/* <img
+          <img
             className={styles.mobileApp_image}
             src="./src/images/Mobile app.png"
             alt=""
@@ -82,7 +82,7 @@ function MobileApp_Container() {
               marginTop: "-18px",
               marginLeft: "-60px",
             }}
-          /> */}
+          />
         </div>
         <div></div>
       </div>

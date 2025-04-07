@@ -4,6 +4,10 @@ import { useInView } from "react-intersection-observer";
 import styles from "./InputForm.module.css";
 import BundleDetails from "./BundleDetails";
 import axios from "axios";
+// 
+
+// import navigate from "react-router-dom";
+
 
 const containerVariants = {
   hidden: { opacity: 0, y: 80 },
@@ -59,6 +63,11 @@ function InputForm({ selectedBundle, quantity }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // if(!formData.firstName || !formData.lastName || !formData.mobileNumber || !formData.email || !formData.password || !formData.address) {
+    //   alert("Please fill in all fields");
+    //   return;
+    // }
   
     const requiredFields = [
       { field: "firstName", name: "First Name" },
@@ -111,6 +120,8 @@ function InputForm({ selectedBundle, quantity }) {
         address: "",
         tenants: Array(quantity).fill({ name: "", email: "", address: "" }),
       });
+
+      // navigate('/')
   
       setShowTenantDetails(false);
   
