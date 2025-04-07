@@ -22,7 +22,7 @@ function DashboardNavbar({ activeTab, setActiveTab, orderStatus }) {
   };
 
   const handleTabClick = (tab) => {
-    if (orderStatus === 'pending' && (tab === 'Dashboard' || tab === 'Billing')) {
+    if (orderStatus === 'pending' && (tab === 'Dashboard' || tab === 'Billing'|| tab === 'Connections')) {
       alert('Please wait until your order is processed to access these features');
       return;
     }
@@ -33,8 +33,8 @@ function DashboardNavbar({ activeTab, setActiveTab, orderStatus }) {
     <div className={styles.navbar}>
       <div className={styles.navContainer}>
         <div className={styles.navItems}>
-          {['Home', 'Dashboard', 'Billing'].map((item) => {
-            const isDisabled = orderStatus === 'pending' && (item === 'Dashboard' || item === 'Billing');
+          {['Home', 'Dashboard', 'Billing','Connections'].map((item) => {
+            const isDisabled = orderStatus === 'pending' && (item === 'Dashboard' || item === 'Billing' || item === 'Connections');
             return (
               <div
                 key={item}

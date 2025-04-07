@@ -19,7 +19,7 @@
     display: flex;
     gap: 20px;
     position: absolute;
-    left: 70%;
+    left: 60%;
     transform: translateX(-50%);
   }
   

@@ -3,6 +3,7 @@ import DashboardNavbar from "../components/Dashboard/DashboardNavbar";
 import Billing from "../components/Dashboard/Billing";
 import Details from "../components/Dashboard/Details";
 import DashboardHome from "../components/Dashboard/Home";
+import Connection from "../components/Dashboard/Connection";
 
 function Dashboard() {
   const [activeTab, setActiveTab] = useState("Home");
@@ -27,6 +28,8 @@ function Dashboard() {
         return userData?.orderDetails?.orderStatus !== "pending" ? <Details /> : <DashboardHome />;
       case 'Billing':
         return userData?.orderDetails?.orderStatus !== "pending" ? <Billing /> : <DashboardHome />;
+      case 'Connections':
+        return userData?.orderDetails?.orderStatus !== "pending" ? <Connection /> : <DashboardHome />;
       default:
         return <DashboardHome />;
     }
