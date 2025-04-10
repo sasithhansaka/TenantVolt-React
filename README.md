@@ -6,6 +6,8 @@ This project aims to develop an IoT-based system that enables boarding house own
 
 Boarding house owners often face challenges in monitoring individual tenants' electricity usage, leading to potential financial losses and disputes. This project addresses these issues by implementing an IoT-based electricity monitoring system that provides real-time consumption data for each room through a web interface.
 
+Designed with usability and scalability in mind, this frontend connects seamlessly to the backend and IoT devices, ensuring efficient electricity management.
+
 ---
 
 ## Features
