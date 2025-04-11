@@ -31,85 +31,75 @@ function Home() {
   const [featuresRef, featuresInView] = useInView({ threshold: 0.1 });
 
   return (
-    <div>
-      <Navbar />
-      
-      <motion.div
-        ref={heroRef}
-        initial="hidden"
-        animate={heroInView ? "visible" : "hidden"}
-        variants={containerVariants}
-        style={{
-          marginTop: "150px",
-          height: "650px",
-          width: "100%",
-        }}
-      >
-          <ModelViewer modelPath={tenantVoltModel} />
-      </motion.div>
+      <div>
+          <Navbar/>
 
-      <motion.div
-        ref={benefitsRef}
-        initial="hidden"
-        animate={benefitsInView ? "visible" : "hidden"}
-        variants={containerVariants}
-      >
-        <BenifitsContainer icons={icons} titles={titles} content={content} />
-      </motion.div>
+          <div style={{marginTop: "120px", height: "650px", width: "100%",}}>
+              <ModelViewer modelPath={tenantVoltModel}/>
+          </div>
 
-      <motion.div
-        ref={mobileRef}
-        initial="hidden"
-        animate={mobileInView ? "visible" : "hidden"}
-        variants={containerVariants}
-      >
-        <MobileApp_Container />
-      </motion.div>
-
-      <motion.div
-        ref={featuresRef}
-        initial="hidden"
-        animate={featuresInView ? "visible" : "hidden"}
-        variants={containerVariants}
-        className={styles.featuresContainer}
-      >
-        <div className={styles.features}>
-          <motion.h1
-            initial={{ opacity: 0, x: -20 }}
-            animate={featuresInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.2 }}
+          <motion.div
+              ref={benefitsRef}
+              initial="hidden"
+              animate={benefitsInView ? "visible" : "hidden"}
+              variants={containerVariants}
           >
-            TENANTVOLT for teams/corporates
-          </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            animate={featuresInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.3 }}
-          >
-            Connect boarding houses to smart energy management with a single IoT
-            device, delivering transparent electricity tracking and automated
-            billing that builds trust between owners and tenants.
-          </motion.p>
+              <BenifitsContainer icons={icons} titles={titles} content={content}/>
+          </motion.div>
 
-          <motion.h4
-            initial={{ opacity: 0, x: -20 }}
-            animate={featuresInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.4 }}
+          <motion.div
+              ref={mobileRef}
+              initial="hidden"
+              animate={mobileInView ? "visible" : "hidden"}
+              variants={containerVariants}
           >
-            Monitor and manage all boarding house electricity from one dashboard.
-          </motion.h4>
-          
-          <FeaturesContainer
-            images={featureImages}
-            titles={featureTitles}
-            content={featureContent}
-          />
-        </div>
-      </motion.div>
+              <MobileApp_Container/>
+          </motion.div>
 
-      <Footer />
-    </div>
+          <motion.div
+              ref={featuresRef}
+              initial="hidden"
+              animate={featuresInView ? "visible" : "hidden"}
+              variants={containerVariants}
+              className={styles.featuresContainer}
+          >
+              <div className={styles.features}>
+                  <motion.h1
+                      initial={{opacity: 0, x: -20}}
+                      animate={featuresInView ? {opacity: 1, x: 0} : {}}
+                      transition={{delay: 0.2}}
+                  >
+                      TENANTVOLT for teams/corporates
+                  </motion.h1>
+
+                  <motion.p
+                      initial={{opacity: 0, x: -20}}
+                      animate={featuresInView ? {opacity: 1, x: 0} : {}}
+                      transition={{delay: 0.3}}
+                  >
+                      Connect boarding houses to smart energy management with a single IoT
+                      device, delivering transparent electricity tracking and automated
+                      billing that builds trust between owners and tenants.
+                  </motion.p>
+
+                  <motion.h4
+                      initial={{opacity: 0, x: -20}}
+                      animate={featuresInView ? {opacity: 1, x: 0} : {}}
+                      transition={{delay: 0.4}}
+                  >
+                      Monitor and manage all boarding house electricity from one dashboard.
+                  </motion.h4>
+
+                  <FeaturesContainer
+                      images={featureImages}
+                      titles={featureTitles}
+                      content={featureContent}
+                  />
+              </div>
+          </motion.div>
+
+          <Footer/>
+      </div>
   );
 }
 
