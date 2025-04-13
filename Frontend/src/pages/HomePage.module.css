@@ -44,4 +44,11 @@
     border-radius: 10px; /* Optional rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
     margin-left: 40px;
-  }
+}
+
+.hero {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: auto; /* Pushes nav items to the right */
+}

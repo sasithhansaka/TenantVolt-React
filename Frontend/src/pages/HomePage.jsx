@@ -38,12 +38,13 @@ function Home() {
     <div>
       <Navbar />
 
-      {/* <div style={{marginTop: "120px", height: "650px", width: "100%",}}>
-              <ModelViewer modelPath={tenantVoltModel}/>
-          </div> */}
+       <div style={{marginTop: "120px", height: "650px", width: "100%", display: "flex", justifyContent: "space-between"}}>
+         <div className={styles.hero}>TENANTVOLT</div>
+         <ModelViewer modelPath={tenantVoltModel}/>
+       </div>
 
       <motion.div
-        ref={benefitsRef}
+          ref={benefitsRef}
         initial="hidden"
         animate={benefitsInView ? "visible" : "hidden"}
         variants={containerVariants}
