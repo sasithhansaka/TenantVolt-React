@@ -50,7 +50,6 @@ Designed with usability and scalability in mind, this frontend connects seamless
 ### Database
 - **Firebase**: Cloud-based platform for real-time data storage and synchronization.
 
----
 
 ## Installation
 
@@ -100,7 +99,6 @@ Follow the steps below to set up and run the project locally:
    npm run dev
    ```
 
----
 
 ## License
 
