@@ -79,3 +79,9 @@
     display: flex;
     background-color: #000000;
 }
+
+
+.videoContainer{
+    margin-top: 30px;
+    margin-left:80px;
+}

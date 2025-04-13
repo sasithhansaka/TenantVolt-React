@@ -20,6 +20,7 @@ function FeaturesContainer({ images, titles, content }) {
         <p className={styles.title}>{titles[currentIndex]}</p>
         <p className={styles.content}>{content[currentIndex]}</p>
       </div>
+      
     </div>
   );
 }
