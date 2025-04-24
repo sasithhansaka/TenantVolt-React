@@ -38,13 +38,40 @@ function Home() {
     <div>
       <Navbar />
 
-       <div style={{marginTop: "120px", height: "650px", width: "100%", display: "flex", justifyContent: "space-between"}}>
-         <div className={styles.hero}>TENANTVOLT</div>
-         <ModelViewer modelPath={tenantVoltModel}/>
-       </div>
+      <div
+        style={{
+          marginTop: "120px",
+          height: "650px",
+          width: "100%",
+          display: "flex",
+          gap: "10px",
+        }}
+      >
+        <div className={styles.hero}>
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <h1>
+              TENANTVOLT SE-10 <br></br>
+            </h1>
+            {/* <p>   IoT-powered electricity tracking that gives owners control and tenants
+            transparency through real-time usage data and automated billing.</p> */}
+            <div className={styles.placeOrder_Button}>
+              <p className={styles.placeOrder_ButtonText}>Order Now</p>
+              <div className={styles.doubleCircle}>
+                <img src="./src/images/Double Right.png" alt="" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        {/* <div className={styles.heroDescription}></div> */}
+        <ModelViewer modelPath={tenantVoltModel} />
+      </div>
 
       <motion.div
-          ref={benefitsRef}
+        ref={benefitsRef}
         initial="hidden"
         animate={benefitsInView ? "visible" : "hidden"}
         variants={containerVariants}
@@ -69,59 +96,59 @@ function Home() {
         className={styles.featuresContainer}
       >
         <div className={styles.features}>
-            <div  style={{ display: "flex" }}>
-          <div>
-            <motion.h1
-              initial={{ opacity: 0, x: -20 }}
-              animate={featuresInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.2 }}
-            >
-              TENANTVOLT for teams/corporates
-            </motion.h1>
+          <div style={{ display: "flex" }}>
+            <div>
+              <motion.h1
+                initial={{ opacity: 0, x: -20 }}
+                animate={featuresInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: 0.2 }}
+              >
+                TENANTVOLT for teams/corporates
+              </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, x: -20 }}
-              animate={featuresInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.3 }}
-            >
-              Connect boarding houses to smart energy management with a single
-              IoT device, delivering transparent electricity tracking and
-              automated billing that builds trust between owners and tenants.
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                animate={featuresInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: 0.3 }}
+              >
+                Connect boarding houses to smart energy management with a single
+                IoT device, delivering transparent electricity tracking and
+                automated billing that builds trust between owners and tenants.
+              </motion.p>
 
-            <motion.h4
-              initial={{ opacity: 0, x: -20 }}
-              animate={featuresInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.4 }}
-            >
-              Monitor and manage all boarding house electricity from one
-              dashboard.
-            </motion.h4>
+              <motion.h4
+                initial={{ opacity: 0, x: -20 }}
+                animate={featuresInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: 0.4 }}
+              >
+                Monitor and manage all boarding house electricity from one
+                dashboard.
+              </motion.h4>
 
-            <FeaturesContainer
-              images={featureImages}
-              titles={featureTitles}
-              content={featureContent}
-            />
-          </div>
-          <div style={{ width: "100%" }}>
-            <h4 style={{ marginTop: "180px" }}>
-                              Connect boarding houses to smart energy management with a single
-              IoT device, delivering transparent electricity tracking and
-              automated billing that builds trust between owners and tenants.
-            </h4>
-            <div className={styles.videoContainer}>
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/KADvwGD_yC8?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0"
-            title="TENANTVOLT Mobile App Preview"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-          </div>
+              <FeaturesContainer
+                images={featureImages}
+                titles={featureTitles}
+                content={featureContent}
+              />
+            </div>
+            <div style={{ width: "100%" }}>
+              <h4 style={{ marginTop: "180px" }}>
+                Connect boarding houses to smart energy management with a single
+                IoT device, delivering transparent electricity tracking and
+                automated billing that builds trust between owners and tenants.
+              </h4>
+              <div className={styles.videoContainer}>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/KADvwGD_yC8?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0"
+                  title="TENANTVOLT Mobile App Preview"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
